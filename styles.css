@@ -30,9 +30,9 @@ html {
     width: 100%;
 }
 
-/* #product-shape {
-    fill: #e3afdf;
-} */
+#product-shape {
+    fill: #FFF392;
+}
 
 #background-image {
     position: absolute;

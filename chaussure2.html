@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.js"> </script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 </head>
 
 <body style="background-color: #f6f6f6;">
 
-    <nav class="bg-gray-900 text-white fixed top-0 left-0 w-full z-50 shadow-lg">
+
+    <nav
+        class="bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 text-white fixed top-0 left-0 w-full z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
 
@@ -20,7 +23,13 @@
 
                 <ul class="hidden md:flex space-x-6">
                     <li><a href="#" class="hover:text-pink-400 transition">Accueil</a></li>
-                    <li><a href="#" class="hover:text-pink-400 transition">Produits</a></li>
+                    <li class="relative group">
+                        <a href="#" class="hover:text-pink-400 transition">Produits</a>
+                        <ul class="absolute left-0 hidden mt-2 bg-white text-gray-900 shadow-lg group-hover:block">
+                            <li><a href="index.html" class="block px-4 py-2 hover:bg-gray-200">Chaussure 1</a></li>
+                            <li><a href="chaussure2.html" class="block px-4 py-2 hover:bg-gray-200">Chaussure 2</a></li>
+                            <li><a href="chaussure3.html" class="block px-4 py-2 hover:bg-gray-200">Chaussure 3</a></li>
+                        </ul>
                     <li><a href="#" class="hover:text-pink-400 transition">Contact</a></li>
                 </ul>
             </div>
@@ -73,18 +82,23 @@
             <br>
 
             <p style="font-weight: bold;">Voici la Air Force One, une sneaker iconique que tu peux entièrement
-            personnaliser ! Clique sur la partie que tu souhaites modifier et choisis tes couleurs pour la rendre
-            unique et à ton goût. Exprime ton style et crée une paire qui te ressemble !</p>
+                personnaliser ! Clique sur la partie que tu souhaites modifier et choisis tes couleurs pour la rendre
+                unique et à ton goût. Exprime ton style et crée une paire qui te ressemble !</p>
 
-            <br>
-            <br>
+            <!-- <div class="flex justify-center mt-6">
+                <lottie-player src="animation.json" background="transparent" speed="1"
+                    style="width: 250px; height: 250px;" loop autoplay></lottie-player>
+            </div> -->
+
             <p style="font-weight: bold; text-align: center;">Modifier aussi ces modèles!</p>
+            <!-- <p style="font-weight: bold; text-align: center;">div class="col-xs-12 col-sm-4 col-md-4"</p> -->
+
             <div class="flex justify-center space-x-4">
                 <a href="index.html">
                     <div class="flex flex-col items-center">
-                    <img src="air-force.png" alt="Bouton 1" class="w-32 h-32">
-                    <p>Chaussure 1</p>
-                </div>
+                        <img src="air-force.png" alt="Bouton 1" class="w-32 h-32">
+                        <p>Chaussure 1</p>
+                    </div>
                 </a>
                 <a href="chaussure3.html">
                     <div class="flex flex-col items-center">
@@ -93,12 +107,12 @@
                     </div>
                 </a>
             </div>
-            </div>
-        </div></a></div>
+        </div></a>
+    </div>
 
     </div>
 
-    <input class="jscolor {onFineChange:'changeColor(this)'}" value="FF88EC">
+    <input class="jscolor {onFineChange:'changeColor(this)'}" value="FFF392">
 
 
     <script>
