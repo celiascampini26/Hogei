@@ -12,10 +12,15 @@ html {
     box-sizing: border-box;
 }
 
+
 #container {
-    position: relative;
+    /* position: relative; */
     display: grid;
     grid-template-columns: 50% 50%;
+}
+
+.p {
+    padding:2rem;
 }
 
 #product-svg {
@@ -25,9 +30,9 @@ html {
     width: 100%;
 }
 
-#product-shape {
+/* #product-shape {
     fill: #e3afdf;
-}
+} */
 
 #background-image {
     position: absolute;
