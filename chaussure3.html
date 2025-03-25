@@ -8,119 +8,170 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.js"> </script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/dfd5bcm.css">
 
 </head>
 
-<body style="background-color: #f6f6f6;">
+<body style="background-color: #E9E9E8;">
+
 
 
     <nav
-        class="bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 text-white fixed top-0 left-0 w-full z-50 shadow-lg">
+        class="bg-green-to-r from-red-500 via-yellow-500 to-green-500 text-white fixed top-0 left-0 w-full z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-
-                <div class="text-2xl font-bold">MonLogo</div>
-
+                <div>
+                    <a href="chaussure1.html">
+                        <img src="hogei_logo.png" alt="hogei Logo" class="h-12">
+                    </a>
+                </div>
                 <ul class="hidden md:flex space-x-6">
-                    <li><a href="#" class="hover:text-pink-400 transition">Accueil</a></li>
+                    <li><a href="index.html" class="hover:text-pink-400 transition text-black">Accueil</a></li>
                     <li class="relative group">
-                        <a href="#" class="hover:text-pink-400 transition">Produits</a>
+                        <a href="#" class="hover:text-pink-400 transition text-black">Produits</a>
                         <ul class="absolute left-0 hidden mt-2 bg-white text-gray-900 shadow-lg group-hover:block">
-                            <li><a href="index.html" class="block px-4 py-2 hover:bg-gray-200">Chaussure 1</a></li>
+                            <li><a href="chaussure1.html" class="block px-4 py-2 hover:bg-gray-200">Chaussure 1</a></li>
                             <li><a href="chaussure2.html" class="block px-4 py-2 hover:bg-gray-200">Chaussure 2</a></li>
                             <li><a href="chaussure3.html" class="block px-4 py-2 hover:bg-gray-200">Chaussure 3</a></li>
                         </ul>
-                    <li><a href="#" class="hover:text-pink-400 transition">Contact</a></li>
+                    </li>
+                    <li>
+                        <button onclick="toggleCart()" class="relative text-black font-bold">
+                            🛒 <span id="cart-count"
+                                class="absolute -top-2 -right-3 bg-pink-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <div id="cart" class="hidden fixed top-20 right-4 bg-white shadow-lg rounded-lg p-4 w-80 z-50">
+        <h2 class="text-lg font-bold mb-2">Votre panier</h2>
+        <ul id="cart-items" class="space-y-2"></ul>
+        <p class="mt-4 font-semibold">Total : <span id="cart-total">0€</span></p>
+    </div>
+
     <div id="container">
-        <div class="p">
+        <div class="">
+
             <?xml version="1.0" encoding="UTF-8"?>
             <svg id="product-svg" class="color-changing-svg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 1200 1200">
                 <defs>
-                    <!-- <style>
-                    .cls-1 {
-                        fill: #e6007e;
-                    }
+                    <style>
+                        .cls-1,
+                        .cls-2 {
+                            fill: #1d1d1b;
+                        }
 
-                    .cls-2 {
-                        fill: #f6bdd8;
-                    }
-                </style> -->
+                        .cls-3 {
+                            isolation: isolate;
+                        }
+
+                        .cls-2 {
+                            mix-blend-mode: multiply;
+                            opacity: .75;
+                        }
+                    </style>
                 </defs>
-                <path class="product-shape" class="cls-1"
-                    d="M570.54,474.54c-14.78,14.03-25.13,27.34-32,37.23-11.35,16.36-18.8,27.34-21.54,44-1.23,7.46-3.16,20.2,2.77,34.46,1.92,4.61,7.86,18.92,23.69,26.46,12.97,6.18,25.16,4.28,29.54,3.38,0,0,14.46-.46,34.46-8.62s85.69-37.85,137.85-66.77,115.85-65.54,143.38-83.38l130.15-84.31s-6.15-3.03-24.72-2.05-27.38,2.05-27.38,2.05c0,0-5.23,3.08-15.59,9.33s-123.69,68.82-123.69,68.82c0,0-89.23,43.38-121.85,57.23s-73.54,26.77-100.31,19.69-34.77-57.54-34.77-57.54Z" />
-                <path class="product-shape" class="cls-1"
-                    d="M933.1,368.59s13.89-17.54,17.85-23.59c19.81-30.28,28.72-60.47,30.15-67.69.1-.5,1.09-4.09,3.08-11.28.96-3.48,1.47-5.26,2.87-6.97.55-.68,3.65-4.32,8.21-4.31,1.85,0,3.33.61,4.51,1.23,6,3.13,9.36,9.21,12.31,14.36,2.73,4.76,5.96,9.25,8.41,14.15,16.85,33.69,17.62,32.29,30.36,60.1,5.13,11.2,11.5,25.61,18.46,42.67l10.46,22.56s-.1.87-1.95,0-23.69-18.46-23.69-18.46c0,0-23.33-18.05-54.46-17.64s-36.41.31-36.41.31c0,0-17.13-.77-30.15-5.44Z" />
-                <path class="product-shape" class="cls-2"
-                    d="M423.77,577.41c5.3,11.14,11.48,18.9,16,23.79,4.66,5.05,8.87,8.47,12.1,11.08,3.69,2.97,8.72,6.72,22.36,14.77,12.26,7.24,15.69,8.62,25.03,13.95,0,0,13.95,7.97,26.87,16.82,10.97,7.52,27.06,20.03,45.13,40,0,0,92.21-38.26,103.59-42.67s128.82-50.26,149.74-53.74c0,0-26.97-39.69-54.97-58.67,0,0-74.67,41.33-80.41,44.1s-62.46,28.62-79.59,35.08-38.46,14.56-63.59,6.97-36.41-36.62-37.74-40.82-4.21-25.33-1.85-36.92,18.36-46.46,38.97-67.08,35.49-35.28,35.49-35.28c0,0,1.54,29.64,1.85,33.23s1.38,26.26,17.26,37.54,65.41,3.08,107.46-19.08c0,0-49.03-26.67-71.18-48.21l-22.15-21.54-19.49-23.18s-5.85,10.26-17.44,19.28-13.33,8.72-19.69,14.77-9.95,9.85-18.67,21.74-24.62,32.51-33.23,39.59-34.26,24.21-39.18,29.33-11.79,12.62-13.95,15.79-14.05,17.44-17.85,20.72-10.87,8.62-10.87,8.62Z" />
-                <path class="product-shape"
-                    d="M92.9,742.54s-15.9,9.33-3.9,9.03,33.54.83,59.69-4.51,119.38-26.36,135.18-31.59,55.59-9.95,75.69-36.51c8.1-15.49,4.21-29.13.62-43.28s-4.31-19.69-4.31-19.69c0,0-24.1,21.13-53.13,35.49s-33.44,5.74-33.44,5.74c0,0-1.08-4.21-.92-6.05l-75.08,36.92s-48.51,20.62-74.46,37.54l-25.95,16.92Z" />
-                <polygon class="product-shape" data-name="-"
-                    points="857 691.15 865 699.15 965.31 674.23 959.46 665 857 691.15" />
-                <path class="product-shape" data-name="-"
-                    d="M1055.15,647.77v-9.23s84.46-22.92,89.54-32.62c0,0,4.92,6,0,8.92s-48.62,22.62-89.54,32.92Z" />
-                <path class="product-shape"
-                    d="M988.38,631.46h-7.07l-11.08,47.39,7.69-1.23.31-8,11.69-2.16.31,6.46,8.92-2.15-10.77-40.31ZM981.62,660.38l3.07-16.92,5.85,16.92h-8.92Z" />
-                <polygon class="product-shape"
-                    points="1003.77 669.31 1010.54 667.77 1010.54 624.38 1003.77 624.38 1003.77 669.31" />
-                <path class="product-shape"
-                    d="M1027.77,645.31s5.38-3.23,6.77-6.46c1.38-3.23,1.54-9.54,1.54-9.54,0,0-.62-7.55-6.46-8.24-5.85-.69-8,.24-13.54,1.78l-1.23,43.69,7.07-1.54v-16l11.39,13.23,7.38-1.85-12.92-15.07ZM1021.92,638.38v-11.53s7.54-2.08,9.7,4.61c0,0,.69,8.23-9.7,6.92Z" />
+                <g class="cls-3">
+                    <g id="Calque_1" data-name="Calque 1">
+                        <path class="product-shape"
+                            d="M214.96,829.85c0-.07.01-.28-.13-.21-1.5,1.31-3,2.95-3.53,4.92-.24.92-.24,1.75.47,2.47.21.21,1.4.86,1.4.96.02.33-.97-.25-1.05-.3-1.89-1.21-1.39-3-.52-4.72-2.37-.64-1.08-3.49-.12-4.85.81-1.14,1.84-1.97,3.22-1.12.75-.66,1.19-1.55,2.29-1.69,1.17-.15,2.06.3,2.96.98.32.24,1.54,1.32.91,1.73l-.22-.04c-.02-.63-.71-1.16-1.2-1.51-1.21-.88-2.85-1.24-3.88.13-.16.22-.5,1.06-.6,1.09-.36.11-.8-.86-1.73-.61-1.41.38-2.88,3.3-2.56,4.66.11.46.77.65,1.05.98.56-.95,1.27-1.83,2.05-2.6.26-.26.73-.54.97-.81.11-.12.2-.4.22-.41.07-.05.28,0,.41-.06.35-.15.71-.43,1.09-.6.24-.11.8-.21.95-.3.13-.08.14-.68.35-.6l.27.42c1.58-.2,2.78.32,3.86,1.44.16.17.34.55.46.64.2.14.64.11.9.2,1.04.36,2,1.71,2.13,2.78.23,1.78-1.16,5.17-3.4,4.66-.3-.07-1.18-.64-1.37-.51-.17.41-.04.87-.09,1.3-.09.75-.78,1.72-1.58,1.76l.13,5.16c.18.2.59-.89.65-.99.56-1.02,1.84-2.72,3.13-2.88.93-.11,1.7.67,1.44,1.58-.31,1.07-1.34,2-2.42,2.24-.43.1-2.09.05-2.28.32-.02.03-.16.68-.16.72,0,.13.15.21.15.32s-.15.21-.16.34c-.1.84-.1,1.94-.06,2.79.01.26.24.94.02,1.1-.03.04-.07.02-.11.02-.4-.01-.37-.4-.41-.78-.06-.7.25-3.09-.12-3.46-.13-.13-1.2-.49-1.42-.52-.38-.05-3.27-.05-3.33-.38.19-1.06,1.89-.67,2.64-.46.28.08.7.37.97.39.32.03.79-.19,1.13-.18-.09-1.75-.09-3.51-.34-5.24-.32-.15-.67-.26-.98-.46-.59-.37-1.06-1.05-1.66-1.36-.92,1.32-2.01,4.15-4.12,3.06-.43-.22-.66-.68-.83-1.12s-.39-1.41-.44-1.87c-.01-.15.02-.24.08-.37-.66.31-1.99-.29-2.23-.93-.34-.92.65-3.53,1.8-3.55.29,0,.86.12.81.5-.67-.04-1.09-.28-1.56.36-.65.89-1.28,2.88.3,3.19.71.14.82-.22,1.29-.38.6-.21.12.76.1,1.1-.1,1.41.59,3.56,2.37,2.49.66-.4,1.16-1.09,1.55-1.75.34-.58.5-1.71,1.32-1.12.73.53,1.31,1.59,2.34,1.63.1-.34.2-.51.52-.68l.2.12-.25.42c.28.1.52-.45.69-.62.02-.02.12.03.15,0,.57-.42.09-2.06.57-2.37.38-.24,1.34.58,1.83.62,1.59.13,2.74-2.2,2.8-3.54s-1.01-3.01-2.4-3.15c.42,1.47-.05,3.09-1.02,4.24-.31.37-1.49,1.43-1.98,1.16-.2-.21.32-.24.46-.31,1.09-.58,2.4-2.74,2.3-3.95-.15-1.76-1.58-3.17-3.32-3.37-.22-.03-1.03-.1-1.11.13l.2,4.09h-.25s-.38-4.06-.38-4.06c-.1-.1-2.02.8-2.23,1.03.18.66-.14,2.03.23,2.56.07.09.68.43.06.4-.39-.02-.65-.74-.65-1.05,0-.44.02-.92-.01-1.35ZM223.18,843.91c.42-.49.98-1.44.4-2-.61-.61-1.6.18-2.09.62-.71.64-1.51,1.61-1.73,2.55.48-.41,1.08-.21,1.65-.27.62-.07,1.37-.43,1.77-.9Z" />
+                        <path class="product-shape"
+                            d="M233.65,802.63c.01.11-.04.28-.14.34-.22.13-1.07.3-1.41.44-3.44,1.32-6.56,2.98-9.9,4.37-.31.13-1.67.53-1.77.61-.41.31,1,2.53-.31,2.88-1.84.49-2.58-1.82-3.92-2.55-.12,2.69-1.64,5.42-4.17,6.47l.26.5c-.41.12-.45-.26-.62-.39-.36-.28-.75-.44-1-.91-.11-.24.53.04.5-.25-.03-.23-.12-.6-.19-.83-.12-.4-.24-.83-.37-1.24s-.54-.9-.61-1.18c-.08-.32.17-.3.39-.14.96.71.9,2.86,1.3,3.93,2.73-.81,3.83-3.96,4.09-6.55.64-.13,1.26.44,1.69.87.41.4,1.88,2.57,2.57,1.68.28-.37-.44-2.11-.28-2.66,1.66-.35,3.08-1.14,4.6-1.82.22-.1.31-.33.62-.19l.04-.25c.46.2.54-.19.77-.33.39-.23.76-.34,1.2-.37l-.08-.16c1.71-.66,3.54-1.58,5.31-2.05.47-.12.94-.26,1.44-.23Z" />
+                        <path class="product-shape"
+                            d="M196.98,810.71c.22.2.21.73.18,1.01-.16,1.31-.88,3.02-1.18,4.37-.19.86-.34,1.76-.48,2.63-.41,2.47-.67,4.97-.8,7.47.27-.01.38-.22.08-.31l.12-.64h.2s.1-.67.18-.29c-.22.65-.3,3.31-.68,3.69-.13.13-.31.08-.47.09.13-2.72.33-5.46.69-8.16.29-2.17.71-4.33,1.3-6.44.22-.79.45-1.85.47-2.73,0-.13-.01-.26,0-.38-.1,0-.2,0-.3,0-1.91.1-5.51,4.55-6.75,6.04-2.09,2.52-4.33,5.32-6.17,8.03-.59.87-1.69,3.04-2.44,3.56-.14.09-.29.18-.46.22-.4-.07.4-.74.49-.86.34-.45.76-1.41,1.04-1.73.23-.25.09.16.3-.47.12-.34.26-.17.32-.26.18-.25.3-.71.38-.85,0,0,.12.08.2,0,.22-.2.34-.63.49-.83.69-.92,1.5-1.88,2.24-2.71.11-.12.32-.23.37-.4.04-.13-.17-.2-.13-.25,0,0,.14-.01.21-.08.36-.38.38-.23.47-.3.05-.04.71-.86.73-.91.04-.11-.19-.29.14-.5.16-.11.28.01.29,0,.02-.02.09-.4.17-.55.28-.53.48-.27.5-.3.02-.02.04-.39.33-.47l-.17-.08,1.02-1.31c.37.12.64-.48.85-.75.96-1.23,2.04-2.14,3.07-3.31.22-.25,2.1-1.35,2.41-1.41.18-.04.63.05.76.17Z" />
+                        <path class="product-shape"
+                            d="M207.31,818.71l.24-1.52.17.17c.02-.36.1-.7.16-1.06.02-.14-.05-.14.17-.13-.02.43.04.88.01,1.31-.02.29-.17,1.47-.25,1.68-.18.44-.69.18-.91-.06-.72-.77-.49-2.97-1.2-4.07-.05-.08,0-.15-.19-.11-.91,1.7-1.32,3.6-1.96,5.41l.5,1.16-.21.13-.13-.04-.43-.72c0,.11-.02.22-.06.31-.14.31-.99,2.1-1.16,2.14-.53.14-.65-.81-.7-1.14-.29-1.79-.13-5.46-.95-6.9-.09-.17-.71-.65-.13-.55.62.1.8,1.2.9,1.74.07.37.1.82.12,1.2.71-.18.99.17,1.34.72l.62,1.2,1.19-3.66c.49-.38.35-.63.5-1.1.13-.39.68-.54,1.03-.37.66.3.87,3.09,1.1,3.84.04.14.06.35.23.4ZM201.85,822.66c.19-.61,1.2-2,1.16-2.59-.03-.34-1.32-2.53-1.71-2.23l.55,4.82Z" />
+                        <path class="product-shape"
+                            d="M216.49,837.04c-.09-.1-.16-.36-.28-.48.55.11.77.42,1.39.32,1.02-.17,1.46-2.95,1.45-3.82-.15-.16-2.59,1.6-2.9,1.72-.15.06-.3.1-.47.08l.04-.42,3.37-1.99c.69.1.44.81.36,1.29-.13.85-.61,2.89-1.34,3.38-.47.32-1.22.34-1.63-.1Z" />
+                        <path class="product-shape"
+                            d="M210.1,817.75c-.07.05-.22,0-.3-.08-.27-.28-.6-2.76-.83-3.29.28-.03.31-.02.43.2.21.39.68,2.42.74,2.91,0,.06-.03.26-.04.26Z" />
+                        <path class="product-shape"
+                            d="M126.79,866.85s2.26,5.95,22.56,8.21,59.54,5.33,59.54,5.33l45.08,2.05,62.77,2.05s112.62,4.72,126.36,6.56,25.44,3.28,52.1,2.87,57.85,2.05,57.85,2.05c0,0,49.44,3.28,68.1,4.92s94.56,6.56,134.56,6.15c40-.41,127.38-6.56,161.64-11.08,34.26-4.51,64.82-9.03,64.82-9.03,0,0,48.82-8,59.9-11.08,0,0,36.92-9.26,35.69-19.49,0,0-.54-2.23-2.46-2.46v-9.23s-9.08-9.54-11.08-10.46-4.23-1.46-5.08-1.38c0,0,3.85,2.54,4.31,4,.46,1.46.88,4.15.38,5.08s-3.62,4.54-8.46,6.31c-4.85,1.77-13.92,4.46-13.92,4.46,0,0-37.23,9.23-44.31,10.26-7.08,1.03-42.87,6.36-42.87,6.36,0,0-69.03,8.1-79.38,9.03s-98.05,6.87-124.31,6.97c-42.28.17-58.26-4.33-142.05-9.85-26.53-1.74-45.23-2.87-45.23-2.87-33.88-2.04-31.38-1.64-34.46-2.05-1.96-.26-16.42-2.23-27.08-1.64-5.16.29-9.85.82-9.85.82-5.56.63-5.86.96-9.03,1.23-5.9.5-10.52-.14-15.18-.82-5.86-.85-10.05-1.99-11.9-2.46-6.88-1.76-17.26-2.43-37.74-3.69-9.8-.6-15.67-.97-24.21-1.23-16.17-.5-17.18.11-30.77-.41-14.36-.55-14.69-1.29-28.31-1.64-3.4-.09-3.48-.04-23.38,0-14.04.03-21.17.04-26.67,0-10.21-.08-18.03-.26-24.62-.41-4.98-.11-5.59-.15-27.9-.82-18.68-.56-20.02-.59-23.79-.82-2.74-.16-11.87-.74-23.79-2.05-16.86-1.86-15.21-2.54-23.38-2.87-4.72-.19-9.06-.12-15.18-1.64-4.45-1.11-7.97-2.6-10.26-3.69l-.05-2s-7.92,2.54-8,8.46-.97,12-.97,12Z" />
+                        <path class="product-shape"
+                            d="M233.46,776.59c8.09.16,19.04.1,32-.82,3.01-.21,2.19-.19,25.03-2.46,11.05-1.1,20.21-1.99,32.62-3.49,11.48-1.38,14.56-1.93,17.85-2.67,7.23-1.62,12.45-3.47,20.51-6.36,4.61-1.65,12.14-4.37,21.74-8.62,18.04-7.98,31.08-15.92,41.23-22.15,4.63-2.84,10.95-7.09,23.59-15.59,5.09-3.42,9.51-6.43,14.97-11.08,3.99-3.39,7.1-6.43,9.23-8.62-7.21.14-13.49-.44-18.67-1.23-6.09-.93-11.58-2.54-22.56-5.74-11.01-3.21-14.81-4.82-17.64-6.15-4.71-2.23-8.4-4.5-10.87-6.15,0,0-40.56,31.23-63.49,36.92s-56.62,10.77-79.38,8.31l-4.92-.82s-9.64,49.23-47.69,48.1l1.08,2.64,25.38,5.97Z" />
+                        <path class="product-shape"
+                            d="M340.85,861c-1.62-2.9-10.28-18.45-12-21.54-11.32-20.33-14.23-25.57-20.62-32.31-6.78-7.16-12.95-11.21-19.08-13.85-3.31-1.42-6.22-2.26-8.31-2.77l-73.54-20s.46,4.24-2.77,6.12c-3.23,1.88-8.62,3.5-8.92,0-.31-3.5-1.08-8.12-7.08-7.97s-11.85.15-22.15,12.62c-10.31,12.46-28.62,37.54-28.62,37.54l-1.54,28.62s.1,1.28,2.77,2.26c0,0,5.38,1.85,8.1,2.46s6.82,1.44,10.67,1.23,10.87.92,10.87.92l11.38,1.54s15.03,1.74,16.62,1.85,22.82,1.28,35.38,1.64,45.54,1.03,45.54,1.03l20.21.1,43.08.51Z" />
+                        <path class="product-shape"
+                            d="M135.2,762.44c-.66,2.22,2.09-6.06,5.54-9.44,1.71-1.68,3.29-2.64,4.72-3.49,1.92-1.15,6.03-3.55,11.49-4.1,1.79-.18,4.61.22,10.26,1.03,4.69.67,8.28,1.38,10.67,1.85,4.87.96,7.3,1.44,8.41,1.85,1.43.52,2.71,1.1,4.72,1.23.64.04,2.39.1,4.72-.62,3.19-.98,5.31-2.74,7.79-4.92,4.84-4.26,5.02-5.54,9.23-8.62.49-.36.17-.1,4.72-3.08,2.8-1.83,3.94-2.59,7.79-5.13,5.93-3.91,8.92-5.87,9.85-6.36,5.49-2.88,8.38-3.51,9.44-3.69,2.62-.44,4.85-.36,6.36-.21,0,0-24.82-8.51-27.28-11.49s-9.13-10.05-11.08-16-13.44-45.44-18.46-51.28-7.18-7.79-7.18-7.79c0,0-8.51,4.82-11.28,10.26s-10.67,20.1-40.41,120Z" />
+                    </g>
+                </g>
             </svg>
 
-            <img id="background-image" src="air-force.png" alt="">
+            <img id="background-image" src="chaussure2.png">
+
+            <div class="flex justify-center mt-6">
+                <lottie-player id="animation2" src="animation2.json" background="transparent" speed="1"
+                    style="width: 300px; height: 300px; display: none;" loop autoplay></lottie-player>
+            </div>
+
         </div>
 
         <div class="p" style="margin-top: 100px;">
-            <h1 style="font-weight: bold; font-size: 3em;" class="text-4xl md:text-6xl">Ma chaussure 3</h1>
+            <div class="flex items-center space-x-4">
+                <h1 style="font-weight: bold; font-size: 3em; font-family: 'ellograph-cf', monospace; "
+                    class="text-4xl md:text-6xl">Bakemono Hana</h1>
+                <button onclick="addToCart()"
+                    class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 transition">Ajouter au
+                    panier</button>
+            </div>
 
             <br>
+            <p style="font-weight: bold; font-family: 'ellograph-cf', monospace;">210€</p>
             <br>
 
-            <p style="font-weight: bold;">Voici la Air Force One, une sneaker iconique que tu peux entièrement
-                personnaliser ! Clique sur la partie que tu souhaites modifier et choisis tes couleurs pour la rendre
-                unique et à ton goût. Exprime ton style et crée une paire qui te ressemble !</p>
+            <p style="font-weight: bold; font-family: 'ellograph-cf', monospace;">Takashi Murakami x Sneaker 🌸
+
+                Inspirée de "Kaikai Kiki and Me", cette paire unique fusionne art et streetwear. Personnalise les
+                détails à ton goût : lacets, accessoires, couleurs… Crée ta propre œuvre.
+
+                🔥Laisse ton empreinte! </p>
+            <br>
+            <p style="font-weight: bold; text-align: center; font-family: 'ellograph-cf', monospace;">Empreintes aussi
+                ces
+                modèles!</p>
+                <br>
+            <!-- <p style="font-weight: bold; text-align: center;">div class="col-xs-12 col-sm-4 col-md-4"</p> -->
+
+            <div class="flex justify-center space-x-4">
+                <a href="shoes1.html">
+                    <div class="flex flex-col items-center">
+                        <img src="chaussure1.png" alt="Bouton 1" class="w-32 h-32">
+                        <p style="font-weight: bold; text-align: center; font-family: 'ellograph-cf', monospace;">
+                            Hana Yume</p>
+                    </div>
+                </a>
+                <a href="chaussure3.html">
+                    <div class="flex flex-col items-center">
+                        <img src="air-force.png" alt="Bouton 2" class="w-32 h-32">
+                        <p style="font-weight: bold; text-align: center; font-family: 'ellograph-cf', monospace;">
+                            Chaussure 3</p>
+                    </div>
+                </a>
+            </div>
 
             <!-- <div class="flex justify-center mt-6">
                 <lottie-player src="animation.json" background="transparent" speed="1"
                     style="width: 250px; height: 250px;" loop autoplay></lottie-player>
             </div> -->
 
-            <p style="font-weight: bold; text-align: center;">Modifier aussi ces modèles!</p>
-            <!-- <p style="font-weight: bold; text-align: center;">div class="col-xs-12 col-sm-4 col-md-4"</p> -->
-
-            <div class="flex justify-center space-x-4">
-                <a href="index.html">
-                    <div class="flex flex-col items-center">
-                        <img src="air-force.png" alt="Bouton 1" class="w-32 h-32">
-                        <p>Chaussure 1</p>
-                    </div>
-                </a>
-                <a href="chaussure2.html">
-                    <div class="flex flex-col items-center">
-                        <img src="air-force.png" alt="Bouton 2" class="w-32 h-32">
-                        <p>Chaussure 2</p>
-                    </div>
-                </a>
-            </div>
         </div></a>
     </div>
 
     </div>
 
-    <input class="jscolor {onFineChange:'changeColor(this)'}" value="FFF392">
+    <input class="jscolor {onFineChange:'changeColor(this)'}" value="ED589F">
 
 
     <script>
-
         let selectedShape = null; // Stocke la forme sélectionnée
 
         // Sélectionne tous les éléments SVG
         const shapes = document.querySelectorAll(".product-shape");
+        const svgContainer = document.getElementById("product-svg"); // SVG parent
 
         // Ajout d'un événement de sélection
         shapes.forEach(shape => {
@@ -137,7 +188,7 @@
         });
 
         // Ajout d'un événement pour désélectionner en cliquant ailleurs dans le SVG
-        document.getElementById("product-svg").addEventListener("click", (event) => {
+        svgContainer.addEventListener("click", (event) => {
             if (!event.target.classList.contains("product-shape")) {
                 if (selectedShape) {
                     selectedShape.style.opacity = "1"; // Remet l'opacité normale
@@ -146,17 +197,90 @@
             }
         });
 
-        // Change la couleur uniquement de l'élément sélectionné
+        // Change la couleur et affiche l'animation à l'endroit du changement
         function changeColor(picker) {
             if (selectedShape) {
                 selectedShape.setAttribute("fill", picker.toHEXString());
+
+                // Obtenir les coordonnées du path sélectionné
+                let bbox = selectedShape.getBoundingClientRect();
+                let svgBbox = svgContainer.getBoundingClientRect();
+
+                // Calculer la position pour placer l'animation Lottie
+                let leftPos = bbox.left - svgBbox.left + bbox.width / 2;
+                let topPos = bbox.top - svgBbox.top + bbox.height / 2;
+
+                // Créer une nouvelle instance de l'animation Lottie
+                let newAnimation = document.createElement("lottie-player");
+                newAnimation.setAttribute("src", "animation2.json");
+                newAnimation.setAttribute("background", "transparent");
+                newAnimation.setAttribute("speed", "1");
+                newAnimation.setAttribute("loop", "");
+                newAnimation.setAttribute("autoplay", "");
+                newAnimation.style.width = "200px";
+                newAnimation.style.height = "200px";
+                newAnimation.style.position = "absolute";
+                newAnimation.style.left = `${leftPos}px`;
+                newAnimation.style.top = `${topPos}px`;
+
+                // Ajouter l'animation au document
+                document.body.appendChild(newAnimation);
+
+                // Supprimer l'animation après 3 secondes
+                setTimeout(() => {
+                    newAnimation.remove();
+                }, 3000);
             } else {
                 console.warn("Aucune forme sélectionnée !");
             }
         }
 
-
     </script>
+
+    <script>
+        let cart = [];
+
+        function addToCart() {
+            const item = {
+                name: "Hana Yume",
+                price: 200
+            };
+            cart.push(item);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartCount = document.getElementById("cart-count");
+            const cartItems = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+
+            cartCount.textContent = cart.length;
+            cartItems.innerHTML = "";
+
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price;
+                const li = document.createElement("li");
+                li.className = "flex justify-between border-b pb-1";
+                li.innerHTML = `${item.name} - ${item.price}€ <button onclick="removeFromCart(${index})" class="text-red-500 text-sm">Supprimer</button>`;
+                cartItems.appendChild(li);
+            });
+
+            cartTotal.textContent = `${total}€`;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function toggleCart() {
+            const cartEl = document.getElementById("cart");
+            cartEl.classList.toggle("hidden");
+        }
+    </script>
+
+
 
 </body>
 

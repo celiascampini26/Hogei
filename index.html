@@ -1,200 +1,74 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.js"> </script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <title>Mon Site Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Écran de chargement */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1s ease-out, visibility 1s;
+            z-index: 1000;
+        }
+
+        .preloader img {
+            width: 150px;
+            opacity: 1;
+            animation: fadeOut 1.5s forwards ease-in-out 1.5s;
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(1.2); }
+        }
+
+        .content {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
 </head>
-
-<body style="background-color: #f6f6f6;">
-
-
-    <nav
-        class="bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 text-white fixed top-0 left-0 w-full z-50 shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-
-                <div class="text-2xl font-bold">Murakai</div>
-
-                <ul class="hidden md:flex space-x-6">
-                    <li><a href="#" class="hover:text-pink-400 transition">Accueil</a></li>
-                    <li class="relative group">
-                        <a href="#" class="hover:text-pink-400 transition">Produits</a>
-                        <ul class="absolute left-0 hidden mt-2 bg-white text-gray-900 shadow-lg group-hover:block">
-                            <li><a href="index.html" class="block px-4 py-2 hover:bg-gray-200">Chaussure 1</a></li>
-                            <li><a href="chaussure2.html" class="block px-4 py-2 hover:bg-gray-200">Chaussure 2</a></li>
-                            <li><a href="chaussure3.html" class="block px-4 py-2 hover:bg-gray-200">Chaussure 3</a></li>
-                        </ul>
-                    <li><a href="#" class="hover:text-pink-400 transition">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div id="container">
-        <div class="p">
-            <?xml version="1.0" encoding="UTF-8"?>
-            <svg id="product-svg" class="color-changing-svg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1200 1200">
-                <defs>
-                    <!-- <style>
-                    .cls-1 {
-                        fill: #e6007e;
-                    }
-
-                    .cls-2 {
-                        fill: #f6bdd8;
-                    }
-                </style> -->
-                </defs>
-                <path class="product-shape" class="cls-1"
-                    d="M570.54,474.54c-14.78,14.03-25.13,27.34-32,37.23-11.35,16.36-18.8,27.34-21.54,44-1.23,7.46-3.16,20.2,2.77,34.46,1.92,4.61,7.86,18.92,23.69,26.46,12.97,6.18,25.16,4.28,29.54,3.38,0,0,14.46-.46,34.46-8.62s85.69-37.85,137.85-66.77,115.85-65.54,143.38-83.38l130.15-84.31s-6.15-3.03-24.72-2.05-27.38,2.05-27.38,2.05c0,0-5.23,3.08-15.59,9.33s-123.69,68.82-123.69,68.82c0,0-89.23,43.38-121.85,57.23s-73.54,26.77-100.31,19.69-34.77-57.54-34.77-57.54Z" />
-                <path class="product-shape" class="cls-1"
-                    d="M933.1,368.59s13.89-17.54,17.85-23.59c19.81-30.28,28.72-60.47,30.15-67.69.1-.5,1.09-4.09,3.08-11.28.96-3.48,1.47-5.26,2.87-6.97.55-.68,3.65-4.32,8.21-4.31,1.85,0,3.33.61,4.51,1.23,6,3.13,9.36,9.21,12.31,14.36,2.73,4.76,5.96,9.25,8.41,14.15,16.85,33.69,17.62,32.29,30.36,60.1,5.13,11.2,11.5,25.61,18.46,42.67l10.46,22.56s-.1.87-1.95,0-23.69-18.46-23.69-18.46c0,0-23.33-18.05-54.46-17.64s-36.41.31-36.41.31c0,0-17.13-.77-30.15-5.44Z" />
-                <path class="product-shape" class="cls-2"
-                    d="M423.77,577.41c5.3,11.14,11.48,18.9,16,23.79,4.66,5.05,8.87,8.47,12.1,11.08,3.69,2.97,8.72,6.72,22.36,14.77,12.26,7.24,15.69,8.62,25.03,13.95,0,0,13.95,7.97,26.87,16.82,10.97,7.52,27.06,20.03,45.13,40,0,0,92.21-38.26,103.59-42.67s128.82-50.26,149.74-53.74c0,0-26.97-39.69-54.97-58.67,0,0-74.67,41.33-80.41,44.1s-62.46,28.62-79.59,35.08-38.46,14.56-63.59,6.97-36.41-36.62-37.74-40.82-4.21-25.33-1.85-36.92,18.36-46.46,38.97-67.08,35.49-35.28,35.49-35.28c0,0,1.54,29.64,1.85,33.23s1.38,26.26,17.26,37.54,65.41,3.08,107.46-19.08c0,0-49.03-26.67-71.18-48.21l-22.15-21.54-19.49-23.18s-5.85,10.26-17.44,19.28-13.33,8.72-19.69,14.77-9.95,9.85-18.67,21.74-24.62,32.51-33.23,39.59-34.26,24.21-39.18,29.33-11.79,12.62-13.95,15.79-14.05,17.44-17.85,20.72-10.87,8.62-10.87,8.62Z" />
-                <path class="product-shape"
-                    d="M92.9,742.54s-15.9,9.33-3.9,9.03,33.54.83,59.69-4.51,119.38-26.36,135.18-31.59,55.59-9.95,75.69-36.51c8.1-15.49,4.21-29.13.62-43.28s-4.31-19.69-4.31-19.69c0,0-24.1,21.13-53.13,35.49s-33.44,5.74-33.44,5.74c0,0-1.08-4.21-.92-6.05l-75.08,36.92s-48.51,20.62-74.46,37.54l-25.95,16.92Z" />
-                <polygon class="product-shape" data-name="-"
-                    points="857 691.15 865 699.15 965.31 674.23 959.46 665 857 691.15" />
-                <path class="product-shape" data-name="-"
-                    d="M1055.15,647.77v-9.23s84.46-22.92,89.54-32.62c0,0,4.92,6,0,8.92s-48.62,22.62-89.54,32.92Z" />
-                <path class="product-shape"
-                    d="M988.38,631.46h-7.07l-11.08,47.39,7.69-1.23.31-8,11.69-2.16.31,6.46,8.92-2.15-10.77-40.31ZM981.62,660.38l3.07-16.92,5.85,16.92h-8.92Z" />
-                <polygon class="product-shape"
-                    points="1003.77 669.31 1010.54 667.77 1010.54 624.38 1003.77 624.38 1003.77 669.31" />
-                <path class="product-shape"
-                    d="M1027.77,645.31s5.38-3.23,6.77-6.46c1.38-3.23,1.54-9.54,1.54-9.54,0,0-.62-7.55-6.46-8.24-5.85-.69-8,.24-13.54,1.78l-1.23,43.69,7.07-1.54v-16l11.39,13.23,7.38-1.85-12.92-15.07ZM1021.92,638.38v-11.53s7.54-2.08,9.7,4.61c0,0,.69,8.23-9.7,6.92Z" />
-            </svg>
-
-            <img id="background-image" src="air-force.png" alt="">
-
-            <div class="flex justify-center mt-6">
-                <lottie-player id="animation2" src="animation2.json" background="transparent" speed="1"
-                    style="width: 300px; height: 300px; display: none;" loop autoplay></lottie-player>
-            </div>
-
-        </div>
-
-        <div class="p" style="margin-top: 100px;">
-            <h1 style="font-weight: bold; font-size: 3em;" class="text-4xl md:text-6xl">Ma chaussure 1</h1>
-
-            <br>
-            <br>
-
-            <p style="font-weight: bold;">Voici la Air Force One, une sneaker iconique que tu peux entièrement
-                personnaliser ! Clique sur la partie que tu souhaites modifier et choisis tes couleurs pour la rendre
-                unique et à ton goût. Exprime ton style et crée une paire qui te ressemble !</p>
-
-            <p style="font-weight: bold; text-align: center;">Modifier aussi ces modèles!</p>
-            <!-- <p style="font-weight: bold; text-align: center;">div class="col-xs-12 col-sm-4 col-md-4"</p> -->
-
-            <div class="flex justify-center space-x-4">
-                <a href="chaussure2.html">
-                    <div class="flex flex-col items-center">
-                        <img src="air-force.png" alt="Bouton 1" class="w-32 h-32">
-                        <p>Chaussure 2</p>
-                    </div>
-                </a>
-                <a href="chaussure3.html">
-                    <div class="flex flex-col items-center">
-                        <img src="air-force.png" alt="Bouton 2" class="w-32 h-32">
-                        <p>Chaussure 3</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- <div class="flex justify-center mt-6">
-                <lottie-player src="animation.json" background="transparent" speed="1"
-                    style="width: 250px; height: 250px;" loop autoplay></lottie-player>
-            </div> -->
-            
-        </div></a>
+<body>
+    <!-- Écran de chargement avec le logo -->
+    <div class="preloader">
+        <img src="hogei_logo.png" alt="Logo">
     </div>
 
+    <!-- Contenu principal du site -->
+    <div class="content">
+        <h1>Bienvenue sur mon site</h1>
+        <p>Voici le contenu de votre site.</p>
     </div>
-
-    <input class="jscolor {onFineChange:'changeColor(this)'}" value="FFF392">
-
 
     <script>
-        let selectedShape = null; // Stocke la forme sélectionnée
-    
-        // Sélectionne tous les éléments SVG
-        const shapes = document.querySelectorAll(".product-shape");
-        const svgContainer = document.getElementById("product-svg"); // SVG parent
-    
-        // Ajout d'un événement de sélection
-        shapes.forEach(shape => {
-            shape.addEventListener("click", (event) => {
-                // Retirer l'effet visuel de l'ancienne forme sélectionnée
-                if (selectedShape) {
-                    selectedShape.style.opacity = "1"; // Remet l'opacité normale
-                }
-    
-                // Met à jour l'élément sélectionné
-                selectedShape = event.target;
-                selectedShape.style.opacity = "0.5"; // Rend la forme plus claire
-            });
+        window.addEventListener("load", function() {
+            setTimeout(() => {
+                window.location.href = 'chaussure1.html';
+                
+                
+                
+            }, 2000); // Temps d'affichage du logo avant la transition
         });
-    
-        // Ajout d'un événement pour désélectionner en cliquant ailleurs dans le SVG
-        svgContainer.addEventListener("click", (event) => {
-            if (!event.target.classList.contains("product-shape")) {
-                if (selectedShape) {
-                    selectedShape.style.opacity = "1"; // Remet l'opacité normale
-                    selectedShape = null;
-                }
-            }
-        });
-    
-        // Change la couleur et affiche l'animation à l'endroit du changement
-        function changeColor(picker) {
-            if (selectedShape) {
-                selectedShape.setAttribute("fill", picker.toHEXString());
-    
-                // Obtenir les coordonnées du path sélectionné
-                let bbox = selectedShape.getBoundingClientRect();
-                let svgBbox = svgContainer.getBoundingClientRect();
-    
-                // Calculer la position pour placer l'animation Lottie
-                let leftPos = bbox.left - svgBbox.left + bbox.width / 2;
-                let topPos = bbox.top - svgBbox.top + bbox.height / 2;
-    
-                // Créer une nouvelle instance de l'animation Lottie
-                let newAnimation = document.createElement("lottie-player");
-                newAnimation.setAttribute("src", "animation2.json");
-                newAnimation.setAttribute("background", "transparent");
-                newAnimation.setAttribute("speed", "1");
-                newAnimation.setAttribute("loop", "");
-                newAnimation.setAttribute("autoplay", "");
-                newAnimation.style.width = "200px";
-                newAnimation.style.height = "200px";
-                newAnimation.style.position = "absolute";
-                newAnimation.style.left = `${leftPos}px`;
-                newAnimation.style.top = `${topPos}px`;
-    
-                // Ajouter l'animation au document
-                document.body.appendChild(newAnimation);
-    
-                // Supprimer l'animation après 3 secondes
-                setTimeout(() => {
-                    newAnimation.remove();
-                }, 3000);
-            } else {
-                console.warn("Aucune forme sélectionnée !");
-            }
-        }
     </script>
-    
-    
-
-
 </body>
-
 </html>
