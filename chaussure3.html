@@ -2,13 +2,13 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.js"> </script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/dfd5bcm.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.js"> </script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/dfd5bcm.css">
 
 </head>
 
@@ -16,269 +16,397 @@
 
 
 
-    <nav
-        class="bg-green-to-r from-red-500 via-yellow-500 to-green-500 text-white fixed top-0 left-0 w-full z-50 shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div>
-                    <a href="chaussure1.html">
-                        <img src="hogei_logo.png" alt="hogei Logo" class="h-12">
-                    </a>
-                </div>
-                <ul class="hidden md:flex space-x-6">
-                    <li><a href="index.html" class="hover:text-pink-400 transition text-black">Accueil</a></li>
-                    <li class="relative group">
-                        <a href="#" class="hover:text-pink-400 transition text-black">Produits</a>
-                        <ul class="absolute left-0 hidden mt-2 bg-white text-gray-900 shadow-lg group-hover:block">
-                            <li><a href="chaussure1.html" class="block px-4 py-2 hover:bg-gray-200">Chaussure 1</a></li>
-                            <li><a href="chaussure2.html" class="block px-4 py-2 hover:bg-gray-200">Chaussure 2</a></li>
-                            <li><a href="chaussure3.html" class="block px-4 py-2 hover:bg-gray-200">Chaussure 3</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <button onclick="toggleCart()" class="relative text-black font-bold">
-                            🛒 <span id="cart-count"
-                                class="absolute -top-2 -right-3 bg-pink-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+  <nav
+    class="bg-green-to-r from-red-500 via-yellow-500 to-green-500 text-white fixed top-0 left-0 w-full z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div>
+          <a href="chaussure1.html">
+            <img src="hogei_logo.png" alt="hogei Logo" class="h-12">
+          </a>
         </div>
-    </nav>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="index.html" class="hover:text-pink-400 transition text-black">Accueil</a></li>
+          <li class="relative group">
+            <a href="#" class="hover:text-pink-400 transition text-black">Produits</a>
+            <ul class="absolute left-0 hidden mt-2 bg-white text-gray-900 shadow-lg group-hover:block">
+              <li><a href="chaussure1.html" class="block px-4 py-2 hover:bg-gray-200">Hana Yume</a></li>
+              <li><a href="chaussure2.html" class="block px-4 py-2 hover:bg-gray-200">Bakemono Hana</a></li>
+              <li><a href="chaussure3.html" class="block px-4 py-2 hover:bg-gray-200">Kaikai Bloom</a></li>
+            </ul>
+          </li>
+          <li>
+            <button onclick="toggleCart()" class="relative text-black font-bold">
+              🛒 <span id="cart-count"
+                class="absolute -top-2 -right-3 bg-pink-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <div id="cart" class="hidden fixed top-20 right-4 bg-white shadow-lg rounded-lg p-4 w-80 z-50">
-        <h2 class="text-lg font-bold mb-2">Votre panier</h2>
-        <ul id="cart-items" class="space-y-2"></ul>
-        <p class="mt-4 font-semibold">Total : <span id="cart-total">0€</span></p>
+  <div id="cart" class="hidden fixed top-20 right-4 bg-white shadow-lg rounded-lg p-4 w-80 z-50">
+    <h2 class="text-lg font-bold mb-2">Votre panier</h2>
+    <ul id="cart-items" class="space-y-2"></ul>
+    <p class="mt-4 font-semibold">Total : <span id="cart-total">0€</span></p>
+  </div>
+
+  <div id="container">
+    <div class="">
+
+
+
+
+
+
+
+
+      <?xml version="1.0" encoding="UTF-8"?>
+      <svg id="product-svg" class="color-changing-svg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 1200">
+        <defs>
+          <style>
+            .cls-1 {
+              filter: url(#drop-shadow-2);
+            }
+
+            .cls-1,
+            .cls-2,
+            .cls-3,
+            .cls-4,
+            .cls-5,
+            .cls-6,
+            .cls-7,
+            .cls-8 {
+              fill: #d3ccc4;
+            }
+
+            .cls-2 {
+              filter: url(#drop-shadow-1);
+            }
+
+            .cls-9 {
+              fill: #edaab7;
+              mix-blend-mode: multiply;
+            }
+
+            .cls-3 {
+              filter: url(#drop-shadow-8);
+            }
+
+            .cls-4 {
+              filter: url(#drop-shadow-3);
+            }
+
+            .cls-5 {
+              filter: url(#drop-shadow-6);
+            }
+
+            .cls-10 {
+              isolation: isolate;
+            }
+
+            .cls-6 {
+              filter: url(#drop-shadow-7);
+            }
+
+            .cls-11 {
+              fill: #1e1e1c;
+            }
+
+            .cls-7 {
+              filter: url(#drop-shadow-4);
+            }
+
+            .cls-8 {
+              filter: url(#drop-shadow-5);
+            }
+          </style>
+          <filter id="drop-shadow-1" x="275.33" y="903.44" width="39.84" height="38.64" filterUnits="userSpaceOnUse">
+            <feOffset dx="-1" dy="0" />
+            <feGaussianBlur result="blur" stdDeviation="1" />
+            <feFlood flood-color="#1d1d1b" flood-opacity=".7" />
+            <feComposite in2="blur" operator="in" />
+            <feComposite in="SourceGraphic" />
+          </filter>
+          <filter id="drop-shadow-2" x="312.77" y="914" width="29.52" height="27.84" filterUnits="userSpaceOnUse">
+            <feOffset dx="-1" dy="0" />
+            <feGaussianBlur result="blur-2" stdDeviation="1" />
+            <feFlood flood-color="#1d1d1b" flood-opacity=".7" />
+            <feComposite in2="blur-2" operator="in" />
+            <feComposite in="SourceGraphic" />
+          </filter>
+          <filter id="drop-shadow-3" x="339.17" y="913.04" width="21.84" height="28.56" filterUnits="userSpaceOnUse">
+            <feOffset dx="-1" dy="0" />
+            <feGaussianBlur result="blur-3" stdDeviation="1" />
+            <feFlood flood-color="#1d1d1b" flood-opacity=".7" />
+            <feComposite in2="blur-3" operator="in" />
+            <feComposite in="SourceGraphic" />
+          </filter>
+          <filter id="drop-shadow-4" x="356.45" y="913.04" width="30.48" height="29.04" filterUnits="userSpaceOnUse">
+            <feOffset dx="-1" dy="0" />
+            <feGaussianBlur result="blur-4" stdDeviation="1" />
+            <feFlood flood-color="#1d1d1b" flood-opacity=".7" />
+            <feComposite in2="blur-4" operator="in" />
+            <feComposite in="SourceGraphic" />
+          </filter>
+          <filter id="drop-shadow-5" x="384.29" y="903.2" width="31.2" height="38.4" filterUnits="userSpaceOnUse">
+            <feOffset dx="-1" dy="0" />
+            <feGaussianBlur result="blur-5" stdDeviation="1" />
+            <feFlood flood-color="#1d1d1b" flood-opacity=".7" />
+            <feComposite in2="blur-5" operator="in" />
+            <feComposite in="SourceGraphic" />
+          </filter>
+          <filter id="drop-shadow-6" x="410.93" y="913.04" width="30.72" height="29.04" filterUnits="userSpaceOnUse">
+            <feOffset dx="-1" dy="0" />
+            <feGaussianBlur result="blur-6" stdDeviation="1" />
+            <feFlood flood-color="#1d1d1b" flood-opacity=".7" />
+            <feComposite in2="blur-6" operator="in" />
+            <feComposite in="SourceGraphic" />
+          </filter>
+          <filter id="drop-shadow-7" x="438.77" y="913.04" width="42.48" height="28.56" filterUnits="userSpaceOnUse">
+            <feOffset dx="-1" dy="0" />
+            <feGaussianBlur result="blur-7" stdDeviation="1" />
+            <feFlood flood-color="#1d1d1b" flood-opacity=".7" />
+            <feComposite in2="blur-7" operator="in" />
+            <feComposite in="SourceGraphic" />
+          </filter>
+          <filter id="drop-shadow-8" x="479.09" y="904.4" width="15.12" height="37.2" filterUnits="userSpaceOnUse">
+            <feOffset dx="-1" dy="0" />
+            <feGaussianBlur result="blur-8" stdDeviation="1" />
+            <feFlood flood-color="#1d1d1b" flood-opacity=".7" />
+            <feComposite in2="blur-8" operator="in" />
+            <feComposite in="SourceGraphic" />
+          </filter>
+        </defs>
+        <g class="cls-10">
+          <g id="Calque_1" data-name="Calque 1">
+            <path class="product-shape"
+              d="M313.05,937.72c0,.46-.22.7-.65.7h-7.95c-.43,0-.65-.26-.65-.79,0-1.51.06-3.78.17-6.81.11-3.02.17-5.29.17-6.81,0-.43-.07-.67-.2-.7-.17.09-1.17,2.4-3.01,6.94-1.08,2.67-2.16,5.32-3.23,7.97-.15.34-.34.55-.56.61-.08.01-.37.02-.9.02-.78,0-1.24-.15-1.39-.45-.81-1.65-1.87-4.04-3.19-7.19-1.41-3.32-2.46-5.73-3.17-7.21-.03-.08-.1-.16-.2-.25-.1.13-.16.35-.16.65,0,1.47.04,3.67.11,6.6s.11,5.14.11,6.6c0,.52-.21.79-.63.79h-7.5c-.3,0-.48-.05-.55-.15-.07-.1-.1-.27-.1-.5,0-1.63.08-4.08.24-7.36.16-3.27.24-5.72.24-7.36,0-1.74-.08-4.99-.22-9.77-.01-1.24-.08-3.09-.2-5.55l-.02-.38c-.01-.3.3-.45.94-.45.82,0,2.06-.03,3.71-.08,1.65-.05,2.88-.08,3.71-.08.17,0,.4.31.7.94l6.56,14.4c.46.97.85,1.46,1.17,1.46.17,0,.52-.56,1.06-1.68,1.51-3.14,3.75-7.88,6.72-14.22.25-.58.53-.88.83-.88.43,0,1.09.02,1.97.07.88.04,1.54.07,1.99.07.37,0,.95-.04,1.72-.11.77-.08,1.34-.11,1.72-.11.45,0,.67.18.67.54,0,1.77-.06,4.41-.19,7.92-.13,3.51-.19,6.15-.19,7.92,0,1.63.07,4.08.2,7.34s.2,5.71.2,7.32Z" />
+            <path class="product-shape"
+              d="M340.18,918c0,1.11-.05,2.77-.16,4.99s-.16,3.88-.16,4.99.04,2.7.11,4.85.11,3.77.11,4.83c0,.4-.19.66-.56.76-.57.15-1.77.22-3.62.22-1.63,0-2.77-.04-3.41-.13-.28-.04-.46-.22-.54-.54l-.13-1.35c-.08-.69-.18-1.03-.31-1.03.21,0-.55.51-2.27,1.53s-3.29,1.53-4.69,1.53c-3.97,0-6.32-1.79-7.05-5.37-.33-1.66-.49-4.07-.49-7.23,0-3.41.28-6.11.83-8.09.17-.61.47-.92.92-.92.69,0,1.74,0,3.14.02s2.46.02,3.14.02c.46,0,.7.19.7.58,0,.1-.01.26-.04.47-.31,2.04-.47,4.1-.47,6.2,0,2.61.08,4.39.25,5.35.27,1.65,1.25,2.47,2.94,2.47.66,0,1.37-.29,2.14-.88.77-.58,1.17-1.19,1.2-1.82.03-.55.04-4.31.04-11.28,0-.49.04-.79.11-.88.09-.15.36-.22.81-.22.73,0,1.84,0,3.31.02,1.48.01,2.58.02,3.31.02.45,0,.71.11.79.34.03.12.04.3.04.54Z" />
+            <path class="product-shape"
+              d="M358.78,924.42c0,.58-.32.88-.97.88-.28,0-.7-.02-1.25-.06-.55-.04-.95-.06-1.22-.06-1.24,0-2.09.19-2.54.58s-.67,1.18-.67,2.36c0,.64.01,1.62.03,2.93.02,1.31.03,2.29.03,2.93,0,.43.03,1.08.09,1.94.06.86.09,1.5.09,1.92,0,.36-.25.56-.74.61-.72.06-1.82.09-3.3.09s-2.56-.04-3.41-.13c-.49-.06-.74-.31-.74-.74,0-1.2,0-2.99.02-5.38.01-2.39.02-4.18.02-5.38,0-3.52-.32-6.42-.97-8.69-.03-.13-.04-.25-.04-.34,0-.22.11-.37.34-.45.82-.09,2.03-.25,3.62-.49,2.37-.46,3.59-.7,3.66-.7.27,0,.44.47.52,1.42s.21,1.42.4,1.42c-.21,0,.4-.39,1.84-1.18,1.44-.79,2.82-1.18,4.16-1.18.84,0,1.26.18,1.26.54,0,.43-.04,1.05-.13,1.84-.09.85-.14,1.47-.16,1.84,0,.43,0,1.01.02,1.73.03.88.04,1.47.04,1.75Z" />
+            <path class="product-shape"
+              d="M383.98,927.18c0,1.15.07,2.87.2,5.14s.2,3.98.2,5.12c0,.6-.26.92-.79.97-1.86.13-3.98.2-6.38.2-.28,0-.48-.43-.57-1.29-.1-.86-.21-1.3-.35-1.31-.12.06-.28.19-.47.38-1.68,1.69-3.47,2.54-5.39,2.54-2.92,0-5.34-1.15-7.25-3.46-1.81-2.16-2.72-4.73-2.72-7.73,0-3.46.94-6.24,2.81-8.36,1.95-2.19,4.61-3.28,8-3.28,2.35,0,4.21.82,5.57,2.47.06.08.11.11.16.11.13,0,.29-.36.46-1.09.17-.73.38-1.09.62-1.09.55,0,1.61.16,3.17.47,1.48.3,2.55.55,3.19.76.22.09.34.21.34.36,0,.06-.02.22-.07.47-.48,2.71-.72,5.58-.72,8.6ZM376.74,927.32c0-1.27-.4-2.32-1.2-3.16-.8-.83-1.85-1.25-3.13-1.25s-2.33.41-3.12,1.24-1.19,1.88-1.19,3.17c0,1.21.42,2.25,1.26,3.12s1.86,1.3,3.05,1.3c1.27,0,2.31-.42,3.12-1.25.81-.83,1.21-1.89,1.21-3.18Z" />
+            <path class="product-shape"
+              d="M413.4,923.75c0,3.31-1.62,5.83-4.87,7.55-.3.15-.45.31-.45.47,0,.25.7,1.31,2.09,3.18,1.39,1.87,2.09,2.84,2.09,2.93,0,.4-1.98.61-5.95.61-1.53,0-2.41-.19-2.65-.58-.6-1-1.54-2.44-2.81-4.31-.08-.09-1.42-.19-4.04-.31,0,.46,0,1.21.02,2.22s.02,1.77.02,2.27c0,.45-.22.7-.65.74-.27.03-1.45.04-3.55.04-1.81,0-2.87-.03-3.17-.09-.4-.08-.61-.38-.61-.92v-13.75c0-1.84-.07-4.6-.2-8.27s-.2-6.42-.2-8.24c0-.36.2-.55.61-.56.79,0,1.98-.01,3.57-.04.42-.03,1.15-.12,2.18-.27.91-.13,1.63-.2,2.16-.2.24,0,.36.22.36.65,0,.57-.04,1.34-.13,2.31-.1,1.14-.17,1.92-.18,2.34-.13,3.22-.2,5.71-.2,7.48,0,.42.05.64.16.65.13-.09.31-.25.54-.49,1.95-2.02,4.31-3.03,7.1-3.03,2.62,0,4.7.6,6.24,1.8,1.69,1.33,2.54,3.28,2.54,5.84ZM404.48,925.21c0-1.81-1.03-2.72-3.08-2.72-.91,0-1.89.34-2.92,1.03-1.11.73-1.66,1.54-1.66,2.4,0,1.24.17,1.99.52,2.25.27.18,1.13.27,2.58.27,3.04,0,4.56-1.08,4.56-3.23Z" />
+            <path class="product-shape"
+              d="M438.67,927.18c0,1.15.07,2.87.2,5.14s.2,3.98.2,5.12c0,.6-.26.92-.79.97-1.86.13-3.98.2-6.38.2-.28,0-.48-.43-.57-1.29-.1-.86-.21-1.3-.35-1.31-.12.06-.28.19-.47.38-1.68,1.69-3.47,2.54-5.39,2.54-2.92,0-5.34-1.15-7.25-3.46-1.81-2.16-2.72-4.73-2.72-7.73,0-3.46.94-6.24,2.81-8.36,1.95-2.19,4.61-3.28,8-3.28,2.35,0,4.21.82,5.57,2.47.06.08.11.11.16.11.13,0,.29-.36.46-1.09.17-.73.38-1.09.62-1.09.55,0,1.61.16,3.17.47,1.48.3,2.55.55,3.19.76.22.09.34.21.34.36,0,.06-.02.22-.07.47-.48,2.71-.72,5.58-.72,8.6ZM431.44,927.32c0-1.27-.4-2.32-1.2-3.16-.8-.83-1.85-1.25-3.13-1.25s-2.33.41-3.12,1.24-1.19,1.88-1.19,3.17c0,1.21.42,2.25,1.26,3.12s1.86,1.3,3.05,1.3c1.27,0,2.31-.42,3.12-1.25.81-.83,1.21-1.89,1.21-3.18Z" />
+            <path class="product-shape"
+              d="M479.03,937.58c0,.52-.22.82-.67.88s-1.56.09-3.32.09-2.96-.04-3.41-.13-.67-.46-.67-1.1c0-.69.02-1.72.07-3.09.04-1.37.07-2.4.07-3.09,0-2.62-.03-4.48-.09-5.59-.09-1.78-.94-2.67-2.54-2.67-.7,0-1.4.3-2.1.89-.7.59-1.08,1.25-1.16,1.97-.06.63-.09,2.47-.09,5.53,0,.7.02,1.77.07,3.2.04,1.43.07,2.5.07,3.22,0,.49-.22.74-.65.74h-6.81c-.42,0-.63-.31-.63-.92,0-.7.02-1.76.07-3.17s.07-2.47.07-3.19c0-.55-.01-1.39-.04-2.52s-.04-1.97-.04-2.54c0-2.14-.82-3.21-2.45-3.21-.66,0-1.37.25-2.13.76-.84.55-1.26,1.14-1.26,1.75,0,1.36,0,3.4.02,6.11s.02,4.74.02,6.09c0,.37-.04.61-.13.7s-.32.15-.7.18c-.67.06-1.74.09-3.19.09-.94,0-2.01-.04-3.21-.13-.36-.03-.57-.08-.64-.16-.07-.08-.1-.3-.1-.67,0-1.2,0-2.99.02-5.38.01-2.39.02-4.18.02-5.38,0-2.46-.18-5.22-.54-8.29-.03-.18-.04-.31-.04-.4,0-.25.1-.43.31-.52.33-.13.95-.25,1.86-.34,1.12-.1,1.79-.17,2-.2.15-.03.74-.19,1.77-.47.73-.21,1.33-.31,1.77-.31.28,0,.43.52.45,1.56.01,1.04.08,1.56.18,1.56.15-.06.32-.17.52-.31,1.35-1.05,2.41-1.77,3.19-2.16,1.15-.55,2.4-.83,3.75-.83s2.61.31,3.68.92c1.21.69,2,1.65,2.36,2.9.79-1.08,1.89-1.98,3.28-2.72s2.75-1.1,4.07-1.1c1.98,0,3.59.46,4.83,1.37,1.41,1.03,2.11,2.51,2.11,4.42,0,.79-.02,1.99-.07,3.58-.04,1.59-.07,2.79-.07,3.58,0,.94.02,2.36.07,4.26.04,1.89.07,3.31.07,4.26Z" />
+            <path class="product-shape"
+              d="M491.61,928.1c0,1.09.02,2.72.07,4.89.04,2.16.07,3.78.07,4.86,0,.31-.19.5-.56.56-.51.09-1.65.13-3.44.13s-2.95-.04-3.46-.13c-.33-.06-.53-.16-.61-.29-.03-.06-.04-.28-.04-.67,0-1.03.02-2.59.07-4.66.04-2.07.07-3.63.07-4.68,0-4.25-.17-7.64-.49-10.15-.03-.24-.04-.4-.04-.47,0-.3.2-.45.61-.45s1.06.04,1.92.13c.86.09,1.51.13,1.94.13s1.09-.04,1.95-.11,1.52-.11,1.95-.11c.36,0,.54.15.54.45,0,.06-.01.2-.04.43-.33,2.92-.49,6.3-.49,10.15ZM492.19,911.41c0,2.61-1.47,3.91-4.4,3.91-1.26,0-2.3-.33-3.12-.99-.9-.72-1.35-1.69-1.35-2.92s.46-2.13,1.39-2.88c.85-.69,1.88-1.03,3.08-1.03s2.18.35,3.03,1.06c.91.75,1.37,1.7,1.37,2.85Z" />
+            <path class="product-shape"
+              d="M806.61,826.54s13.38-19.38,56.62-18.77,99.38,4.77,106.15,4.62,13.54-1.08,15.08-2.46-6.15-3.69-6.15-3.69c0,0,35.23,2.62,36,6.92-3.23,3.23-8.77,6.77-34.46,8.31s-57.54,1.54-57.54,1.54c0,0-52.31,1.69-62.77,2.15s-52.92,1.38-52.92,1.38Z" />
+            <path class="product-shape"
+              d="M799.23,897s-24.31-42.77-67.69-52.92c-43.38-10.15-172.92-37.85-172.92-37.85l3.69-7.08s153.54,31.08,168.62,35.08c15.08,4,57.54,26.46,78.77,62.77h-10.46Z" />
+            <path class="product-shape"
+              d="M150,709.31s63.69,6.46,86.15,10.46l11.08-5.23s-85.23-14.77-97.23-11.38v6.15Z" />
+            <path class="product-shape"
+              d="M379.54,764.08s56.62,21.85,73.23,25.85c0,0-4.62-5.95-4.1-8.82-58.46-22.46-61.95-24.41-61.95-24.41,0,0-6.97-1.23-7.18,7.38Z" />
+            <path class="product-shape"
+              d="M402.92,602.64l-.41-30.36s5.33-45.95,38.97-60.31c0,0-13.13-11.49-23.38,0s-28.92,23.59-21.74,93.95l6.56-3.28Z" />
+            <path class="product-shape"
+              d="M120.25,866.44s-9.03,9.23,0,18.87h170.67s170.67-.41,247.38,8.21,156.92,20.64,188.72,21.81,95.79,3.01,107.08,2.81,240.82-11.08,254.77-19.28c0,0,4.51-11.49-9.23-18.67,0,0-.82,2.87-13.54,4.31s-27.28,3.08-48.41,4.51-76.31,5.33-89.03,5.74-83.9,3.69-103.79,4.1-118.77-.82-192.41-12.31c-45.13-6.56-104-11.28-136.82-12.92s-164.92-9.23-190.77-7.38-45.54,2.05-45.54,2.05c0,0-126.15-1.23-139.08-1.85Z" />
+            <path class="product-shape"
+              d="M200.66,594.03s34.46-4.51,44.31,22.56c2.26,16.62-1.44,41.64,19.28,43.49s60.31-13.54,60.31-13.54c0,0,43.28-22.15,50.46-22.15l12.31-8.62,9.03-9.85s-100.31,53.09-122.67,50.05c0,0-3.9-28.92-8.21-35.69s-11.49-41.44-58.26-32l-6.56,5.74Z" />
+            <path class="product-shape"
+              d="M120.25,866.44s-10.87-2.67-9.64-18.05,5.85-19.08,14.15-19.69,21.54-6.77,25.23-6.15,20.62,0,36.92,9.85c0,0,8.62,3.38,30.15,4.31s55.38,1.23,55.38,1.23c0,0,15.27,2.46,23.84,15.38l8.57,12.92s-47.9,4.1-184.62.21Z" />
+            <path class="product-shape"
+              d="M521.04,551.44c-.96.6-2.01,1.55-1.28,2.57.27.2,1.55-.91,2.52-1.78l-1.24-.79ZM513.81,546.87c.21.86.32,1.77.16,2.58-.58,2.85-3.55,1.2-4.96-.42-.34-.39-.91-1.89-1.27-1.09-.28.62,0,1.1-.84,1.64-1.85,1.18-3.36-1.57-3.69-3.15-.23-1.13.43-1.28,1.12-1.87-.35-.45-1.04-.04-1.31.24-1.11,1.12.74,4.87,2.04,5.53.92.47,2.85-.15,3.15-1.12.08.19.15.32.32.47.54.45,1.79,1.29,2.42,1.6s1.35.58,2,.41c2.09-.56,1.97-2.5,1.49-4.42l-.63-.4ZM503.97,542.74c1,2.67,2.43,5.08,5.54,4.58.12-.02,1.71-.35,1.33-.68-.11-.11-1.95.34-2.38.31-1.45-.1-2.34-.99-3.08-2.21-.79-1.29-1.26-2.72-1.53-4.17l-.54-.34c.12.71.29,1.42.5,2.12-.62-.08-1.47.33-2.06-.05-1.12-.74-2.22-2.83-2.62-4.71l-.53-.34c.02.13.04.26.07.39.53,2.38,2.33,6.67,5.3,5.1Z" />
+            <path class="product-shape"
+              d="M466.07,532.79c.43,0,.99.59,1.25.92,1.24,1.56,2.38,4.09,3.53,5.83.73,1.11,1.55,2.22,2.34,3.29,2.24,3.04,4.66,5.99,7.21,8.8.25-.27.12-.6-.25-.4l-.56-.8.19-.2c0-.06-.61-.81-.14-.48.47.91,3.24,3.85,3.29,4.62.02.26-.21.39-.36.54-2.78-3.06-5.51-6.18-8.05-9.44-2.03-2.61-3.94-5.34-5.62-8.16-.63-1.06-1.55-2.42-2.46-3.38-.13-.14-.28-.27-.42-.4-.09.1-.2.18-.29.28-1.73,1.93-.47,10.16-.07,12.94.68,4.71,1.49,9.86,2.61,14.53.36,1.5,1.6,4.88,1.44,6.16-.03.23-.09.47-.2.67-.47.31-.4-1.19-.44-1.39-.16-.8-.77-2.24-.84-2.85-.05-.49.25.08-.21-.8-.25-.47.06-.44.03-.59-.09-.44-.47-1.05-.53-1.27,0-.01.19-.03.19-.2,0-.42-.34-1.01-.41-1.36-.32-1.65-.56-3.45-.73-5.05-.02-.23.06-.56-.07-.78-.1-.18-.37-.05-.39-.14,0-.02.13-.15.11-.29-.06-.75.11-.61.13-.77,0-.08-.23-1.6-.27-1.68-.07-.15-.49-.14-.41-.67.04-.27.29-.25.29-.28,0-.04-.34-.52-.43-.75-.3-.84.17-.76.17-.8,0-.04-.37-.46-.18-.82l-.25.07-.41-2.38c.48-.22.1-1.12.02-1.62-.39-2.24-.32-4.25-.57-6.5-.05-.48.59-3.45.83-3.82.14-.21.66-.55.92-.55Z" />
+            <path class="product-shape"
+              d="M485.55,531.51c-.14-.3-1.26-1.72-1.55-2.05-.43-.49-.97-.91-1.41-1.39-.23.19-.15.12-.02.29.32.44.6.9.97,1.3l-.34-.02,1.4,1.87c-.23.11-.46-.1-.66-.21-1.01-.59-4.19-3.39-5.16-3.08-.51.16-.89.84-.59,1.39.35.64.75.78.68,1.66l2.76,5.06-1.89-.7c-.93-.26-1.57-.36-2.07.51-.42-.39-.93-.85-1.4-1.18-.66-.47-2.01-1.5-2.72-1.01-.66.46.45.39.72.47,2.32.77,6.09,4.87,8.28,6.52.4.3,1.53,1.21,1.89.55.12-.21-.98-2.95-1.17-3.41-.06-.14-.16-.28-.27-.4l1.17.37.17-.08.06-.34-1.72-.77c-1.31-2.56-2.94-5-3.88-7.7.14-.23.15-.1.3-.06,1.86.5,3.98,3.08,5.5,3.22.47.04,1.24-.17.95-.81ZM483.53,540.97l-5.68-4.65c.06-.7,3.65.42,4.04.76.67.59,1.18,3.05,1.64,3.89Z" />
+            <path class="product-shape"
+              d="M486.27,527.82c-.02.11-.22.21-.37.2-.55-.04-3.52-2.39-4.32-2.74.24-.29.28-.32.63-.2l4.07,2.74Z" />
+          </g>
+        </g>
+      </svg>
+
+      <img id="background-image" src="chaussure3.png">
+
+      <div class="flex justify-center mt-6">
+        <lottie-player id="animation2" src="animation2.json" background="transparent" speed="1"
+          style="width: 300px; height: 300px; display: none;" loop autoplay></lottie-player>
+      </div>
+
     </div>
 
-    <div id="container">
-        <div class="">
+    <div class="p" style="margin-top: 100px;">
 
-            <?xml version="1.0" encoding="UTF-8"?>
-            <svg id="product-svg" class="color-changing-svg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1200 1200">
-                <defs>
-                    <style>
-                        .cls-1,
-                        .cls-2 {
-                            fill: #1d1d1b;
-                        }
+      <div class="flex items-center space-x-4">
+        <h1 style="font-weight: bold; font-size: 3em; font-family: 'ellograph-cf', monospace; "
+          class="text-4xl md:text-6xl">Kaikai Bloom</h1>
+        <button onclick="addToCart()"
+          class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 transition">Ajouter au
+          panier</button>
+      </div>
 
-                        .cls-3 {
-                            isolation: isolate;
-                        }
+      <br>
+      <p style="font-weight: bold; font-family: 'ellograph-cf', monospace;">240€</p>
+      <br>
 
-                        .cls-2 {
-                            mix-blend-mode: multiply;
-                            opacity: .75;
-                        }
-                    </style>
-                </defs>
-                <g class="cls-3">
-                    <g id="Calque_1" data-name="Calque 1">
-                        <path class="product-shape"
-                            d="M214.96,829.85c0-.07.01-.28-.13-.21-1.5,1.31-3,2.95-3.53,4.92-.24.92-.24,1.75.47,2.47.21.21,1.4.86,1.4.96.02.33-.97-.25-1.05-.3-1.89-1.21-1.39-3-.52-4.72-2.37-.64-1.08-3.49-.12-4.85.81-1.14,1.84-1.97,3.22-1.12.75-.66,1.19-1.55,2.29-1.69,1.17-.15,2.06.3,2.96.98.32.24,1.54,1.32.91,1.73l-.22-.04c-.02-.63-.71-1.16-1.2-1.51-1.21-.88-2.85-1.24-3.88.13-.16.22-.5,1.06-.6,1.09-.36.11-.8-.86-1.73-.61-1.41.38-2.88,3.3-2.56,4.66.11.46.77.65,1.05.98.56-.95,1.27-1.83,2.05-2.6.26-.26.73-.54.97-.81.11-.12.2-.4.22-.41.07-.05.28,0,.41-.06.35-.15.71-.43,1.09-.6.24-.11.8-.21.95-.3.13-.08.14-.68.35-.6l.27.42c1.58-.2,2.78.32,3.86,1.44.16.17.34.55.46.64.2.14.64.11.9.2,1.04.36,2,1.71,2.13,2.78.23,1.78-1.16,5.17-3.4,4.66-.3-.07-1.18-.64-1.37-.51-.17.41-.04.87-.09,1.3-.09.75-.78,1.72-1.58,1.76l.13,5.16c.18.2.59-.89.65-.99.56-1.02,1.84-2.72,3.13-2.88.93-.11,1.7.67,1.44,1.58-.31,1.07-1.34,2-2.42,2.24-.43.1-2.09.05-2.28.32-.02.03-.16.68-.16.72,0,.13.15.21.15.32s-.15.21-.16.34c-.1.84-.1,1.94-.06,2.79.01.26.24.94.02,1.1-.03.04-.07.02-.11.02-.4-.01-.37-.4-.41-.78-.06-.7.25-3.09-.12-3.46-.13-.13-1.2-.49-1.42-.52-.38-.05-3.27-.05-3.33-.38.19-1.06,1.89-.67,2.64-.46.28.08.7.37.97.39.32.03.79-.19,1.13-.18-.09-1.75-.09-3.51-.34-5.24-.32-.15-.67-.26-.98-.46-.59-.37-1.06-1.05-1.66-1.36-.92,1.32-2.01,4.15-4.12,3.06-.43-.22-.66-.68-.83-1.12s-.39-1.41-.44-1.87c-.01-.15.02-.24.08-.37-.66.31-1.99-.29-2.23-.93-.34-.92.65-3.53,1.8-3.55.29,0,.86.12.81.5-.67-.04-1.09-.28-1.56.36-.65.89-1.28,2.88.3,3.19.71.14.82-.22,1.29-.38.6-.21.12.76.1,1.1-.1,1.41.59,3.56,2.37,2.49.66-.4,1.16-1.09,1.55-1.75.34-.58.5-1.71,1.32-1.12.73.53,1.31,1.59,2.34,1.63.1-.34.2-.51.52-.68l.2.12-.25.42c.28.1.52-.45.69-.62.02-.02.12.03.15,0,.57-.42.09-2.06.57-2.37.38-.24,1.34.58,1.83.62,1.59.13,2.74-2.2,2.8-3.54s-1.01-3.01-2.4-3.15c.42,1.47-.05,3.09-1.02,4.24-.31.37-1.49,1.43-1.98,1.16-.2-.21.32-.24.46-.31,1.09-.58,2.4-2.74,2.3-3.95-.15-1.76-1.58-3.17-3.32-3.37-.22-.03-1.03-.1-1.11.13l.2,4.09h-.25s-.38-4.06-.38-4.06c-.1-.1-2.02.8-2.23,1.03.18.66-.14,2.03.23,2.56.07.09.68.43.06.4-.39-.02-.65-.74-.65-1.05,0-.44.02-.92-.01-1.35ZM223.18,843.91c.42-.49.98-1.44.4-2-.61-.61-1.6.18-2.09.62-.71.64-1.51,1.61-1.73,2.55.48-.41,1.08-.21,1.65-.27.62-.07,1.37-.43,1.77-.9Z" />
-                        <path class="product-shape"
-                            d="M233.65,802.63c.01.11-.04.28-.14.34-.22.13-1.07.3-1.41.44-3.44,1.32-6.56,2.98-9.9,4.37-.31.13-1.67.53-1.77.61-.41.31,1,2.53-.31,2.88-1.84.49-2.58-1.82-3.92-2.55-.12,2.69-1.64,5.42-4.17,6.47l.26.5c-.41.12-.45-.26-.62-.39-.36-.28-.75-.44-1-.91-.11-.24.53.04.5-.25-.03-.23-.12-.6-.19-.83-.12-.4-.24-.83-.37-1.24s-.54-.9-.61-1.18c-.08-.32.17-.3.39-.14.96.71.9,2.86,1.3,3.93,2.73-.81,3.83-3.96,4.09-6.55.64-.13,1.26.44,1.69.87.41.4,1.88,2.57,2.57,1.68.28-.37-.44-2.11-.28-2.66,1.66-.35,3.08-1.14,4.6-1.82.22-.1.31-.33.62-.19l.04-.25c.46.2.54-.19.77-.33.39-.23.76-.34,1.2-.37l-.08-.16c1.71-.66,3.54-1.58,5.31-2.05.47-.12.94-.26,1.44-.23Z" />
-                        <path class="product-shape"
-                            d="M196.98,810.71c.22.2.21.73.18,1.01-.16,1.31-.88,3.02-1.18,4.37-.19.86-.34,1.76-.48,2.63-.41,2.47-.67,4.97-.8,7.47.27-.01.38-.22.08-.31l.12-.64h.2s.1-.67.18-.29c-.22.65-.3,3.31-.68,3.69-.13.13-.31.08-.47.09.13-2.72.33-5.46.69-8.16.29-2.17.71-4.33,1.3-6.44.22-.79.45-1.85.47-2.73,0-.13-.01-.26,0-.38-.1,0-.2,0-.3,0-1.91.1-5.51,4.55-6.75,6.04-2.09,2.52-4.33,5.32-6.17,8.03-.59.87-1.69,3.04-2.44,3.56-.14.09-.29.18-.46.22-.4-.07.4-.74.49-.86.34-.45.76-1.41,1.04-1.73.23-.25.09.16.3-.47.12-.34.26-.17.32-.26.18-.25.3-.71.38-.85,0,0,.12.08.2,0,.22-.2.34-.63.49-.83.69-.92,1.5-1.88,2.24-2.71.11-.12.32-.23.37-.4.04-.13-.17-.2-.13-.25,0,0,.14-.01.21-.08.36-.38.38-.23.47-.3.05-.04.71-.86.73-.91.04-.11-.19-.29.14-.5.16-.11.28.01.29,0,.02-.02.09-.4.17-.55.28-.53.48-.27.5-.3.02-.02.04-.39.33-.47l-.17-.08,1.02-1.31c.37.12.64-.48.85-.75.96-1.23,2.04-2.14,3.07-3.31.22-.25,2.1-1.35,2.41-1.41.18-.04.63.05.76.17Z" />
-                        <path class="product-shape"
-                            d="M207.31,818.71l.24-1.52.17.17c.02-.36.1-.7.16-1.06.02-.14-.05-.14.17-.13-.02.43.04.88.01,1.31-.02.29-.17,1.47-.25,1.68-.18.44-.69.18-.91-.06-.72-.77-.49-2.97-1.2-4.07-.05-.08,0-.15-.19-.11-.91,1.7-1.32,3.6-1.96,5.41l.5,1.16-.21.13-.13-.04-.43-.72c0,.11-.02.22-.06.31-.14.31-.99,2.1-1.16,2.14-.53.14-.65-.81-.7-1.14-.29-1.79-.13-5.46-.95-6.9-.09-.17-.71-.65-.13-.55.62.1.8,1.2.9,1.74.07.37.1.82.12,1.2.71-.18.99.17,1.34.72l.62,1.2,1.19-3.66c.49-.38.35-.63.5-1.1.13-.39.68-.54,1.03-.37.66.3.87,3.09,1.1,3.84.04.14.06.35.23.4ZM201.85,822.66c.19-.61,1.2-2,1.16-2.59-.03-.34-1.32-2.53-1.71-2.23l.55,4.82Z" />
-                        <path class="product-shape"
-                            d="M216.49,837.04c-.09-.1-.16-.36-.28-.48.55.11.77.42,1.39.32,1.02-.17,1.46-2.95,1.45-3.82-.15-.16-2.59,1.6-2.9,1.72-.15.06-.3.1-.47.08l.04-.42,3.37-1.99c.69.1.44.81.36,1.29-.13.85-.61,2.89-1.34,3.38-.47.32-1.22.34-1.63-.1Z" />
-                        <path class="product-shape"
-                            d="M210.1,817.75c-.07.05-.22,0-.3-.08-.27-.28-.6-2.76-.83-3.29.28-.03.31-.02.43.2.21.39.68,2.42.74,2.91,0,.06-.03.26-.04.26Z" />
-                        <path class="product-shape"
-                            d="M126.79,866.85s2.26,5.95,22.56,8.21,59.54,5.33,59.54,5.33l45.08,2.05,62.77,2.05s112.62,4.72,126.36,6.56,25.44,3.28,52.1,2.87,57.85,2.05,57.85,2.05c0,0,49.44,3.28,68.1,4.92s94.56,6.56,134.56,6.15c40-.41,127.38-6.56,161.64-11.08,34.26-4.51,64.82-9.03,64.82-9.03,0,0,48.82-8,59.9-11.08,0,0,36.92-9.26,35.69-19.49,0,0-.54-2.23-2.46-2.46v-9.23s-9.08-9.54-11.08-10.46-4.23-1.46-5.08-1.38c0,0,3.85,2.54,4.31,4,.46,1.46.88,4.15.38,5.08s-3.62,4.54-8.46,6.31c-4.85,1.77-13.92,4.46-13.92,4.46,0,0-37.23,9.23-44.31,10.26-7.08,1.03-42.87,6.36-42.87,6.36,0,0-69.03,8.1-79.38,9.03s-98.05,6.87-124.31,6.97c-42.28.17-58.26-4.33-142.05-9.85-26.53-1.74-45.23-2.87-45.23-2.87-33.88-2.04-31.38-1.64-34.46-2.05-1.96-.26-16.42-2.23-27.08-1.64-5.16.29-9.85.82-9.85.82-5.56.63-5.86.96-9.03,1.23-5.9.5-10.52-.14-15.18-.82-5.86-.85-10.05-1.99-11.9-2.46-6.88-1.76-17.26-2.43-37.74-3.69-9.8-.6-15.67-.97-24.21-1.23-16.17-.5-17.18.11-30.77-.41-14.36-.55-14.69-1.29-28.31-1.64-3.4-.09-3.48-.04-23.38,0-14.04.03-21.17.04-26.67,0-10.21-.08-18.03-.26-24.62-.41-4.98-.11-5.59-.15-27.9-.82-18.68-.56-20.02-.59-23.79-.82-2.74-.16-11.87-.74-23.79-2.05-16.86-1.86-15.21-2.54-23.38-2.87-4.72-.19-9.06-.12-15.18-1.64-4.45-1.11-7.97-2.6-10.26-3.69l-.05-2s-7.92,2.54-8,8.46-.97,12-.97,12Z" />
-                        <path class="product-shape"
-                            d="M233.46,776.59c8.09.16,19.04.1,32-.82,3.01-.21,2.19-.19,25.03-2.46,11.05-1.1,20.21-1.99,32.62-3.49,11.48-1.38,14.56-1.93,17.85-2.67,7.23-1.62,12.45-3.47,20.51-6.36,4.61-1.65,12.14-4.37,21.74-8.62,18.04-7.98,31.08-15.92,41.23-22.15,4.63-2.84,10.95-7.09,23.59-15.59,5.09-3.42,9.51-6.43,14.97-11.08,3.99-3.39,7.1-6.43,9.23-8.62-7.21.14-13.49-.44-18.67-1.23-6.09-.93-11.58-2.54-22.56-5.74-11.01-3.21-14.81-4.82-17.64-6.15-4.71-2.23-8.4-4.5-10.87-6.15,0,0-40.56,31.23-63.49,36.92s-56.62,10.77-79.38,8.31l-4.92-.82s-9.64,49.23-47.69,48.1l1.08,2.64,25.38,5.97Z" />
-                        <path class="product-shape"
-                            d="M340.85,861c-1.62-2.9-10.28-18.45-12-21.54-11.32-20.33-14.23-25.57-20.62-32.31-6.78-7.16-12.95-11.21-19.08-13.85-3.31-1.42-6.22-2.26-8.31-2.77l-73.54-20s.46,4.24-2.77,6.12c-3.23,1.88-8.62,3.5-8.92,0-.31-3.5-1.08-8.12-7.08-7.97s-11.85.15-22.15,12.62c-10.31,12.46-28.62,37.54-28.62,37.54l-1.54,28.62s.1,1.28,2.77,2.26c0,0,5.38,1.85,8.1,2.46s6.82,1.44,10.67,1.23,10.87.92,10.87.92l11.38,1.54s15.03,1.74,16.62,1.85,22.82,1.28,35.38,1.64,45.54,1.03,45.54,1.03l20.21.1,43.08.51Z" />
-                        <path class="product-shape"
-                            d="M135.2,762.44c-.66,2.22,2.09-6.06,5.54-9.44,1.71-1.68,3.29-2.64,4.72-3.49,1.92-1.15,6.03-3.55,11.49-4.1,1.79-.18,4.61.22,10.26,1.03,4.69.67,8.28,1.38,10.67,1.85,4.87.96,7.3,1.44,8.41,1.85,1.43.52,2.71,1.1,4.72,1.23.64.04,2.39.1,4.72-.62,3.19-.98,5.31-2.74,7.79-4.92,4.84-4.26,5.02-5.54,9.23-8.62.49-.36.17-.1,4.72-3.08,2.8-1.83,3.94-2.59,7.79-5.13,5.93-3.91,8.92-5.87,9.85-6.36,5.49-2.88,8.38-3.51,9.44-3.69,2.62-.44,4.85-.36,6.36-.21,0,0-24.82-8.51-27.28-11.49s-9.13-10.05-11.08-16-13.44-45.44-18.46-51.28-7.18-7.79-7.18-7.79c0,0-8.51,4.82-11.28,10.26s-10.67,20.1-40.41,120Z" />
-                    </g>
-                </g>
-            </svg>
+      <p style="font-weight: bold; font-family: 'ellograph-cf', monospace;">Takashi Murakami x Sneaker 🌸
 
-            <img id="background-image" src="chaussure2.png">
+        Inspirée de "Kaikai Kiki and Me", cette paire unique fusionne art et streetwear. Personnalise les
+        détails à ton goût : lacets, accessoires, couleurs… Crée ta propre œuvre.
 
-            <div class="flex justify-center mt-6">
-                <lottie-player id="animation2" src="animation2.json" background="transparent" speed="1"
-                    style="width: 300px; height: 300px; display: none;" loop autoplay></lottie-player>
-            </div>
+        🔥Laisse ton empreinte! </p>
+      <br>
+      <p style="font-weight: bold; text-align: center; font-family: 'ellograph-cf', monospace;">Empreintes aussi
+        ces
+        modèles!</p>
+      <br>
+      <!-- <p style="font-weight: bold; text-align: center;">div class="col-xs-12 col-sm-4 col-md-4"</p> -->
 
-        </div>
+      <div class="flex justify-center space-x-4">
+        <a href="shoes1.html">
+          <div class="flex flex-col items-center">
+            <img src="chaussure1.png" alt="Bouton 1" class="w-32 h-32">
+            <p style="font-weight: bold; text-align: center; font-family: 'ellograph-cf', monospace;">
+              Hana Yume</p>
+          </div>
+        </a>
+        <a href="chaussure2.html">
+          <div class="flex flex-col items-center">
+            <img src="chaussure2.png" alt="Bouton 2" class="w-32 h-32">
+            <p style="font-weight: bold; text-align: center; font-family: 'ellograph-cf', monospace;">
+              Bakemono Hana</p>
+              <p style="font-weight: bold; text-align: center; font-family: 'ellograph-cf', monospace;">
+                210</p>
+          </div>
+        </a>
+      </div>
 
-        <div class="p" style="margin-top: 100px;">
-            <div class="flex items-center space-x-4">
-                <h1 style="font-weight: bold; font-size: 3em; font-family: 'ellograph-cf', monospace; "
-                    class="text-4xl md:text-6xl">Bakemono Hana</h1>
-                <button onclick="addToCart()"
-                    class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 transition">Ajouter au
-                    panier</button>
-            </div>
-
-            <br>
-            <p style="font-weight: bold; font-family: 'ellograph-cf', monospace;">210€</p>
-            <br>
-
-            <p style="font-weight: bold; font-family: 'ellograph-cf', monospace;">Takashi Murakami x Sneaker 🌸
-
-                Inspirée de "Kaikai Kiki and Me", cette paire unique fusionne art et streetwear. Personnalise les
-                détails à ton goût : lacets, accessoires, couleurs… Crée ta propre œuvre.
-
-                🔥Laisse ton empreinte! </p>
-            <br>
-            <p style="font-weight: bold; text-align: center; font-family: 'ellograph-cf', monospace;">Empreintes aussi
-                ces
-                modèles!</p>
-                <br>
-            <!-- <p style="font-weight: bold; text-align: center;">div class="col-xs-12 col-sm-4 col-md-4"</p> -->
-
-            <div class="flex justify-center space-x-4">
-                <a href="shoes1.html">
-                    <div class="flex flex-col items-center">
-                        <img src="chaussure1.png" alt="Bouton 1" class="w-32 h-32">
-                        <p style="font-weight: bold; text-align: center; font-family: 'ellograph-cf', monospace;">
-                            Hana Yume</p>
-                    </div>
-                </a>
-                <a href="chaussure3.html">
-                    <div class="flex flex-col items-center">
-                        <img src="air-force.png" alt="Bouton 2" class="w-32 h-32">
-                        <p style="font-weight: bold; text-align: center; font-family: 'ellograph-cf', monospace;">
-                            Chaussure 3</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- <div class="flex justify-center mt-6">
+      <!-- <div class="flex justify-center mt-6">
                 <lottie-player src="animation.json" background="transparent" speed="1"
                     style="width: 250px; height: 250px;" loop autoplay></lottie-player>
             </div> -->
 
-        </div></a>
-    </div>
+    </div></a>
+  </div>
 
-    </div>
+  </div>
 
-    <input class="jscolor {onFineChange:'changeColor(this)'}" value="ED589F">
+  <input class="jscolor {onFineChange:'changeColor(this)'}" value="ED589F">
 
 
-    <script>
-        let selectedShape = null; // Stocke la forme sélectionnée
+  <script>
+    let selectedShape = null; // Stocke la forme sélectionnée
 
-        // Sélectionne tous les éléments SVG
-        const shapes = document.querySelectorAll(".product-shape");
-        const svgContainer = document.getElementById("product-svg"); // SVG parent
+    // Sélectionne tous les éléments SVG
+    const shapes = document.querySelectorAll(".product-shape");
+    const svgContainer = document.getElementById("product-svg"); // SVG parent
 
-        // Ajout d'un événement de sélection
-        shapes.forEach(shape => {
-            shape.addEventListener("click", (event) => {
-                // Retirer l'effet visuel de l'ancienne forme sélectionnée
-                if (selectedShape) {
-                    selectedShape.style.opacity = "1"; // Remet l'opacité normale
-                }
-
-                // Met à jour l'élément sélectionné
-                selectedShape = event.target;
-                selectedShape.style.opacity = "0.5"; // Rend la forme plus claire
-            });
-        });
-
-        // Ajout d'un événement pour désélectionner en cliquant ailleurs dans le SVG
-        svgContainer.addEventListener("click", (event) => {
-            if (!event.target.classList.contains("product-shape")) {
-                if (selectedShape) {
-                    selectedShape.style.opacity = "1"; // Remet l'opacité normale
-                    selectedShape = null;
-                }
-            }
-        });
-
-        // Change la couleur et affiche l'animation à l'endroit du changement
-        function changeColor(picker) {
-            if (selectedShape) {
-                selectedShape.setAttribute("fill", picker.toHEXString());
-
-                // Obtenir les coordonnées du path sélectionné
-                let bbox = selectedShape.getBoundingClientRect();
-                let svgBbox = svgContainer.getBoundingClientRect();
-
-                // Calculer la position pour placer l'animation Lottie
-                let leftPos = bbox.left - svgBbox.left + bbox.width / 2;
-                let topPos = bbox.top - svgBbox.top + bbox.height / 2;
-
-                // Créer une nouvelle instance de l'animation Lottie
-                let newAnimation = document.createElement("lottie-player");
-                newAnimation.setAttribute("src", "animation2.json");
-                newAnimation.setAttribute("background", "transparent");
-                newAnimation.setAttribute("speed", "1");
-                newAnimation.setAttribute("loop", "");
-                newAnimation.setAttribute("autoplay", "");
-                newAnimation.style.width = "200px";
-                newAnimation.style.height = "200px";
-                newAnimation.style.position = "absolute";
-                newAnimation.style.left = `${leftPos}px`;
-                newAnimation.style.top = `${topPos}px`;
-
-                // Ajouter l'animation au document
-                document.body.appendChild(newAnimation);
-
-                // Supprimer l'animation après 3 secondes
-                setTimeout(() => {
-                    newAnimation.remove();
-                }, 3000);
-            } else {
-                console.warn("Aucune forme sélectionnée !");
-            }
+    // Ajout d'un événement de sélection
+    shapes.forEach(shape => {
+      shape.addEventListener("click", (event) => {
+        // Retirer l'effet visuel de l'ancienne forme sélectionnée
+        if (selectedShape) {
+          selectedShape.style.opacity = "1"; // Remet l'opacité normale
         }
 
-    </script>
+        // Met à jour l'élément sélectionné
+        selectedShape = event.target;
+        selectedShape.style.opacity = "0.5"; // Rend la forme plus claire
+      });
+    });
 
-    <script>
-        let cart = [];
-
-        function addToCart() {
-            const item = {
-                name: "Hana Yume",
-                price: 200
-            };
-            cart.push(item);
-            updateCart();
+    // Ajout d'un événement pour désélectionner en cliquant ailleurs dans le SVG
+    svgContainer.addEventListener("click", (event) => {
+      if (!event.target.classList.contains("product-shape")) {
+        if (selectedShape) {
+          selectedShape.style.opacity = "1"; // Remet l'opacité normale
+          selectedShape = null;
         }
+      }
+    });
 
-        function updateCart() {
-            const cartCount = document.getElementById("cart-count");
-            const cartItems = document.getElementById("cart-items");
-            const cartTotal = document.getElementById("cart-total");
+    // Change la couleur et affiche l'animation à l'endroit du changement
+    function changeColor(picker) {
+      if (selectedShape) {
+        selectedShape.setAttribute("fill", picker.toHEXString());
 
-            cartCount.textContent = cart.length;
-            cartItems.innerHTML = "";
+        // Obtenir les coordonnées du path sélectionné
+        let bbox = selectedShape.getBoundingClientRect();
+        let svgBbox = svgContainer.getBoundingClientRect();
 
-            let total = 0;
-            cart.forEach((item, index) => {
-                total += item.price;
-                const li = document.createElement("li");
-                li.className = "flex justify-between border-b pb-1";
-                li.innerHTML = `${item.name} - ${item.price}€ <button onclick="removeFromCart(${index})" class="text-red-500 text-sm">Supprimer</button>`;
-                cartItems.appendChild(li);
-            });
+        // Calculer la position pour placer l'animation Lottie
+        let leftPos = bbox.left - svgBbox.left + bbox.width / 2;
+        let topPos = bbox.top - svgBbox.top + bbox.height / 2;
 
-            cartTotal.textContent = `${total}€`;
-        }
+        // Créer une nouvelle instance de l'animation Lottie
+        let newAnimation = document.createElement("lottie-player");
+        newAnimation.setAttribute("src", "animation2.json");
+        newAnimation.setAttribute("background", "transparent");
+        newAnimation.setAttribute("speed", "1");
+        newAnimation.setAttribute("loop", "");
+        newAnimation.setAttribute("autoplay", "");
+        newAnimation.style.width = "200px";
+        newAnimation.style.height = "200px";
+        newAnimation.style.position = "absolute";
+        newAnimation.style.left = `${leftPos}px`;
+        newAnimation.style.top = `${topPos}px`;
 
-        function removeFromCart(index) {
-            cart.splice(index, 1);
-            updateCart();
-        }
+        // Ajouter l'animation au document
+        document.body.appendChild(newAnimation);
 
-        function toggleCart() {
-            const cartEl = document.getElementById("cart");
-            cartEl.classList.toggle("hidden");
-        }
-    </script>
+        // Supprimer l'animation après 3 secondes
+        setTimeout(() => {
+          newAnimation.remove();
+        }, 3000);
+      } else {
+        console.warn("Aucune forme sélectionnée !");
+      }
+    }
+
+  </script>
+
+  <script>
+    let cart = [];
+
+    function addToCart() {
+      const item = {
+        name: "Hana Yume",
+        price: 200
+      };
+      cart.push(item);
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartCount = document.getElementById("cart-count");
+      const cartItems = document.getElementById("cart-items");
+      const cartTotal = document.getElementById("cart-total");
+
+      cartCount.textContent = cart.length;
+      cartItems.innerHTML = "";
+
+      let total = 0;
+      cart.forEach((item, index) => {
+        total += item.price;
+        const li = document.createElement("li");
+        li.className = "flex justify-between border-b pb-1";
+        li.innerHTML = `${item.name} - ${item.price}€ <button onclick="removeFromCart(${index})" class="text-red-500 text-sm">Supprimer</button>`;
+        cartItems.appendChild(li);
+      });
+
+      cartTotal.textContent = `${total}€`;
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCart();
+    }
+
+    function toggleCart() {
+      const cartEl = document.getElementById("cart");
+      cartEl.classList.toggle("hidden");
+    }
+  </script>
 
 
 
