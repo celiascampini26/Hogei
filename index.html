@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+    <link rel="icon" type="image/png" href="h.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Site Web</title>
@@ -38,8 +41,15 @@
         }
 
         @keyframes fadeOut {
-            0% { opacity: 1; transform: scale(1); }
-            100% { opacity: 0; transform: scale(1.2); }
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(1.2);
+            }
         }
 
         .content {
@@ -48,6 +58,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Écran de chargement avec le logo -->
     <div class="preloader">
@@ -61,14 +72,15 @@
     </div>
 
     <script>
-        window.addEventListener("load", function() {
+        window.addEventListener("load", function () {
             setTimeout(() => {
                 window.location.href = 'chaussure1.html';
-                
-                
-                
+
+
+
             }, 2000); // Temps d'affichage du logo avant la transition
         });
     </script>
 </body>
+
 </html>
