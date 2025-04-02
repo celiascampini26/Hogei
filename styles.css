@@ -4,6 +4,7 @@ html {
     padding: 0;
     height: 100%;
     color:black;
+    font-family: "Berlin Sans FB Demi", sans-serif;
 }
 
 *,
@@ -14,7 +15,6 @@ html {
 
 
 #container {
-    /* position: relative; */
     display: grid;
     grid-template-columns: 50% 50%;
 }
@@ -28,11 +28,16 @@ html {
     z-index: 2;
     mix-blend-mode: multiply;
     width: 100%;
+    height: auto;
+}
+
+/* .product-shape {
+    fill: #FFF392;
 }
 
 #product-shape {
     fill: #FFF392;
-}
+} */
 
 #background-image {
     position: absolute;
