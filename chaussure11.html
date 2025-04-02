@@ -110,42 +110,44 @@
                 <div class="flex items-center justify-between mb-1">
                     <h2 class="text-lg font-medium font-['ellograph-cf']">Sélectionner la taille</h2>
                     <button onclick="addToCart()"
-                        class="bg-pink-500 text-white px-3 py-1 rounded-full hover:bg-pink-600 transition text-sm">Ajouter
+                        class="bg-pink-500 text-white px-3 py-1 rounded-full hover:bg-green-500 transition text-sm">Ajouter
                         au panier</button>
+                        
                 </div>
+                <br>
                 <div id="size-buttons" class="grid grid-cols-4 gap-2">
                     <button type="button"
-                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-pink-800 hover:bg-green-100 text-sm">EU
                         35</button>
                     <button type="button"
-                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-pink-800 hover:bg-green-100 text-sm">EU
                         36</button>
                     <button type="button"
-                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-pink-800 hover:bg-green-100 text-sm">EU
                         37</button>
                     <button type="button"
-                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-pink-800 hover:bg-green-100 text-sm">EU
                         38</button>
                     <button type="button"
-                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-pink-800 hover:bg-green-100 text-sm">EU
                         39</button>
                     <button type="button"
-                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-pink-800 hover:bg-green-100 text-sm">EU
                         40</button>
                     <button type="button"
-                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-pink-800 hover:bg-green-100 text-sm">EU
                         41</button>
                     <button type="button"
-                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-pink-800 hover:bg-green-100 text-sm">EU
                         42</button>
                     <button type="button"
-                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-pink-800 hover:bg-green-100 text-sm">EU
                         43</button>
                     <button type="button"
-                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-pink-800 hover:bg-green-100 text-sm">EU
                         44</button>
                     <button type="button"
-                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-pink-800 hover:bg-green-100 text-sm">EU
                         45</button>
                 </div>
             </div>
@@ -163,7 +165,7 @@
                 Murakami. Son design unique, entre art et performance, te fait voyager à travers ses personnages colorés
                 et ses motifs iconiques.<br>
 
-                Comme toujours avec Hogei, <strong>personnalise chaque zone noire à ton goût en cliquant dessus</strong> et fais de ta paire un modèle
+                Comme toujours avec Hogei, <strong>personnalise chaque zones de couleurs à ton goût en cliquant dessus</strong> et fais de ta paire un modèle
                 unique, entre art urbain et performance.<br>
 
                 Ici, chaque foulée raconte une histoire, la tienne.<br>
@@ -214,7 +216,7 @@
     <div class="flex justify-center mt-6">
         <input
             class="jscolor {onFineChange:'changeColor(this)'} border-2 border-gray-300 rounded-lg p-2 shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-300"
-            value="ED589F">
+            value="D8A2A9">
     </div>
 
 
@@ -227,6 +229,7 @@
 
         // Ajout d'un événement de sélection
         shapes.forEach(shape => {
+            shape.style.fill = "pink"; // Définit la couleur de remplissage par défaut
             shape.addEventListener("click", (event) => {
                 // Retirer l'effet visuel de l'ancienne forme sélectionnée
                 if (selectedShape) {
@@ -252,8 +255,9 @@
         // Change la couleur et affiche l'animation à l'endroit du changement
         function changeColor(picker) {
             if (selectedShape) {
-                selectedShape.setAttribute("fill", picker.toHEXString());
-
+                
+                selectedShape.style.fill =  picker.toHEXString(); // Change la couleur de la forme sélectionnée
+                selectedShape.style.opacity = "1"; // Remet l'opacité normale
                 // Obtenir les coordonnées du path sélectionné
                 let bbox = selectedShape.getBoundingClientRect();
                 let svgBbox = svgContainer.getBoundingClientRect();
@@ -384,10 +388,10 @@
             updateCart();
         }
 
-        function toggleCart() {
-            const cartEl = document.getElementById("cart");
-            cartEl.classList.toggle("hidden");
-        }
+        // function toggleCart() {
+        //     const cartEl = document.getElementById("cart");
+        //     cartEl.classList.toggle("hidden");
+        // }
     </script>
 
 </body>
