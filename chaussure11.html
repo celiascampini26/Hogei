@@ -12,7 +12,7 @@
 
 </head>
 
-<body style="background-color: #E9E9E8;">
+<body style="background-color: #f2f2f1;">
 
 
 
@@ -58,15 +58,8 @@
         <div class="">
 
             <?xml version="1.0" encoding="UTF-8"?>
-            <svg id="product-svg" class="color-changing-svg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1200 1200">
+            <svg id="product-svg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
                 <defs>
-                    <!-- <style>
-                        .cls-1 {
-                            fill: #b85791;
-                            opacity: .5;
-                        }
-                    </style> -->
                 </defs>
                 <path class="product-shape"
                     d="M365.76,794.17l43.06-43.06s4.51-2.71,0-6.19c-4.51-3.48-25.01-18.31-30.17-20.11,0,0-3.35-5.03.26-7.22s19.86-12.12,19.86-12.12l48.22-29.91,26.56-15.21s17.28-12.64,22.18-14.7c4.9-2.06,25.53-13.67,25.53-13.67l12.89-8.77,13.41-8.51s2.19-2.32,5.67,0,8.51,6.7,8.51,6.7c0,0,1.81,3.22-1.03,6.7s-44.87,54.93-44.87,54.93l-16.5,20.89-12.64,15.99-61.37,64.21-12.38,13.67s7.61,3.48,20.11-3.87c12.51-7.35,30.97-19.6,30.97-19.6l19.57-14.18,23.72-15.47,28.62-17.02,27.33-39.2,24.5-35.07,18.05-28.37,8.25-17.79,5.67-14.44s-2.19-4.77-1.81-13.41l-11.6,29.4-4.64,9.54s-2.45,4.25-10.06-.52-30.43-24.24-30.43-24.24c0,0-7.22-7.61-2.84-14.18,4.38-6.58,21.15-25.27,21.15-25.27,0,0,2.45-5.54,8.77-4.9l1.81-4.13-5.67-3.09s-3.87-2.06-7.99,1.81c-4.13,3.87-25.53,22.43-25.53,22.43,0,0-26.3,22.69-40.49,29.91-14.18,7.22-106.24,51.57-106.24,51.57l-65.24,36.1s-67.18,34.43-79.68,44.1c0,0,7.48,20.76,30.43,34.55,22.95,13.8,47.84,27.72,76.07,31.72Z" />
@@ -91,7 +84,8 @@
                     d="M112.19,892.5s19.77,17.09,28.19,23.04c5.19,3.66,12.57,8.83,23.04,14.44,16.66,8.93,30.36,13.19,33.35,14.1,3.09.94,13.47,4,37.13,6.88,14.49,1.76,27.53,2.68,47.45,3.44,15.93.61,36.94,1.14,61.89,1.03l-11.26,15.39-26.9.77.17-9.28-14.1-.52-.17,8.77-25.62-.17.17-9.8-14.27-.34-.34,8.94-26.13-1.55.69-10.14-15.47-2.75-1.38,9.28-23.72-7.56,1.03-8.77-12.38-5.33-4.47,8.25s-50.8-30.34-52.78-35.93c-1.98-5.59-5.24-11.78-4.13-22.18Z" />
             </svg>
 
-            <img id="background-image" src="chaussure1.png">
+            <img id="background-image" src="chaussure11.png">
+
 
             <div class="flex justify-center mt-6">
                 <lottie-player id="animation2" src="animation2.json" background="transparent" speed="1"
@@ -101,44 +95,107 @@
         </div>
 
         <div class="p" style="margin-top: 100px;">
+
             <div class="flex items-center space-x-4">
                 <h1 style="font-weight: bold; font-size: 3em; font-family: 'ellograph-cf', monospace; "
                     class="text-4xl md:text-6xl">Hana Yume</h1>
-                <button onclick="addToCart()"
-                    class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 transition">Ajouter au
-                    panier</button>
             </div>
 
             <br>
-            <p style="font-weight: bold; font-family: 'ellograph-cf', monospace;">180€</p>
+            <p>180€ → Personnalise-la</p>
+
+
+            <div class="container mx-auto p-2">
+                <div class="flex items-center justify-between mb-1">
+                    <h2 class="text-lg font-medium font-['ellograph-cf']">Sélectionner la taille</h2>
+                    <button onclick="addToCart()"
+                        class="bg-pink-500 text-white px-3 py-1 rounded-full hover:bg-pink-600 transition text-sm">Ajouter
+                        au panier</button>
+                </div>
+                <div id="size-buttons" class="grid grid-cols-4 gap-2">
+                    <button type="button"
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        35</button>
+                    <button type="button"
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        36</button>
+                    <button type="button"
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        37</button>
+                    <button type="button"
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        38</button>
+                    <button type="button"
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        39</button>
+                    <button type="button"
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        40</button>
+                    <button type="button"
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        41</button>
+                    <button type="button"
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        42</button>
+                    <button type="button"
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        43</button>
+                    <button type="button"
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        44</button>
+                    <button type="button"
+                        class="size-btn btn btn-outline-secondary w-full py-1 rounded border text-gray-800 hover:bg-gray-100 text-sm">EU
+                        45</button>
+                </div>
+            </div>
+
             <br>
+            <p
+                style="font-weight: bold; font-family: 'ellograph-cf', monospace; text-align: justify; font-size: 0.9em;">
+                - La sportvie
+            </p>
+            <p style="text-align: justify; font-size: 0.9em;">
+                Pensée pour celles et ceux qui veulent courir vers l’imaginaire, cette sneaker légère et sportive
+                t’offre la sensation de marcher sur un nuage.<br>
 
-            <p style="font-weight: bold; font-family: 'ellograph-cf', monospace;">Takashi Murakami x Sneaker 🌸
+                Sa semelle imposante, confortable et rebondissante, propulse chaque pas dans l’univers pop de Takashi
+                Murakami. Son design unique, entre art et performance, te fait voyager à travers ses personnages colorés
+                et ses motifs iconiques.<br>
 
-                Inspirée de "Kaikai Kiki and Me", cette paire unique fusionne art et streetwear. Personnalise les
-                détails à ton goût : lacets, accessoires, couleurs… Crée ta propre œuvre.
+                Comme toujours avec Hogei, personnalise chaque zone noire à ton goût et fais de ta paire un modèle
+                unique, entre art urbain et performance.<br>
 
-                🔥Laisse ton empreinte! </p>
+                Ici, chaque foulée raconte une histoire, la tienne.<br>
+            </p>
             <br>
             <p style="font-weight: bold; text-align: center; font-family: 'ellograph-cf', monospace;">Empreintes aussi
                 ces
                 modèles!</p>
-            <br>
             <!-- <p style="font-weight: bold; text-align: center;">div class="col-xs-12 col-sm-4 col-md-4"</p> -->
 
-            <div class="flex justify-center space-x-4">
-                <a href="chaussure2.html">
-                    <div class="flex flex-col items-center">
-                        <img src="chaussure2.png" alt="Bouton 1" class="w-32 h-32">
-                        <p style="font-weight: bold; text-align: center; font-family: 'ellograph-cf', monospace;">
-                            Bakemono Hana</p>
+            <div class="flex justify-center space-x-8 mt-8">
+                <a href="chaussure2.html" class="group">
+                    <div class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110">
+                        <div class="relative">
+                            <img src="chaussure2.png" alt="Hana Yume" class="w-40 h-40 rounded-full shadow-lg">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-pink-500 via-yellow-500 to-green-500 opacity-0 group-hover:opacity-50 rounded-full transition-opacity duration-300">
+                            </div>
+                        </div>
+                        <p class="mt-4 text-lg font-bold text-center text-black font-['ellograph-cf']">Bakemono Hana</p>
+                        <p class="text-md font-semibold text-center text-gray-700 font-['ellograph-cf']">210€</p>
                     </div>
                 </a>
-                <a href="chaussure3.html">
-                    <div class="flex flex-col items-center">
-                        <img src="chaussure3.png" alt="Bouton 2" class="w-32 h-32">
-                        <p style="font-weight: bold; text-align: center; font-family: 'ellograph-cf', monospace;">
-                            Kaikai Bloom</p>
+                <a href="chaussure3.html" class="group">
+                    <div class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110">
+                        <div class="relative">
+                            <img src="chaussure3.png" alt="Bakemono Hana" class="w-40 h-40 rounded-full shadow-lg">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 opacity-0 group-hover:opacity-50 rounded-full transition-opacity duration-300">
+                            </div>
+                        </div>
+                        <p class="mt-4 text-lg font-bold text-center text-black font-['ellograph-cf']">Kaikai Bloom</p>
+                        <p class="text-md font-semibold text-center text-gray-700 font-['ellograph-cf']">240€</p>
                     </div>
                 </a>
             </div>
@@ -153,7 +210,11 @@
 
     </div>
 
-    <input class="jscolor {onFineChange:'changeColor(this)'}" value="ED589F">
+    <div class="flex justify-center mt-6">
+        <input
+            class="jscolor {onFineChange:'changeColor(this)'} border-2 border-gray-300 rounded-lg p-2 shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-300"
+            value="ED589F">
+    </div>
 
 
     <script>
@@ -232,8 +293,8 @@
 
         function addToCart() {
             const item = {
-                name: "Hana Yume",
-                price: 180
+                name: "Bakemono Hana",
+                price: 240
             };
             cart.push(item);
             updateCart();
@@ -270,7 +331,63 @@
         }
     </script>
 
+    <script>
+        let selectedSize = null;
 
+        document.querySelectorAll('.size-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.size-btn').forEach(btn => btn.classList.remove('bg-pink-200'));
+                button.classList.add('bg-pink-200');
+                selectedSize = button.innerText;
+            });
+        });
+
+        function addToCart() {
+            if (!selectedSize) {
+                alert("Merci de choisir une taille avant d'ajouter au panier.");
+                return;
+            }
+
+            const item = {
+                name: "Bakemono Hana",
+                price: 240,
+                size: selectedSize,
+                quantity: 1
+            };
+            cart.push(item);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartCount = document.getElementById("cart-count");
+            const cartItems = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+
+            cartCount.textContent = cart.length;
+            cartItems.innerHTML = "";
+
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price * item.quantity;
+                const li = document.createElement("li");
+                li.className = "flex justify-between border-b pb-1 text-sm";
+                li.innerHTML = `${item.name} | Taille: ${item.size} | ${item.price}€ x ${item.quantity} <button onclick="removeFromCart(${index})" class="text-red-500">Supprimer</button>`;
+                cartItems.appendChild(li);
+            });
+
+            cartTotal.textContent = `${total}€`;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function toggleCart() {
+            const cartEl = document.getElementById("cart");
+            cartEl.classList.toggle("hidden");
+        }
+    </script>
 
 </body>
 
