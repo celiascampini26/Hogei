@@ -18,36 +18,56 @@
 
 
   <nav
-    class="bg-green-to-r from-red-500 via-yellow-500 to-green-500 text-white fixed top-0 left-0 w-full z-50 shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <div>
-          <a href="chaussure1.html">
-            <img src="hogei_logo.png" alt="hogei Logo" class="h-12">
-          </a>
+        class="bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 text-white fixed top-0 left-0 w-full z-50 shadow-lg"></nav>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div>
+                    <a href="chaussure1.html">
+                        <img src="hogei_logo.png" alt="hogei Logo" class="h-12">
+                    </a>
+                </div>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="index.html" class="hover:text-pink-400 transition text-black">Accueil</a></li>
+                    <li class="relative group">
+                        <a href="#" class="hover:text-pink-400 transition text-black">Produits</a>
+                        <ul class="absolute left-0 hidden mt-2 bg-white text-gray-900 shadow-lg group-hover:block">
+                            <li><a href="chaussure1.html" class="block px-4 py-2 hover:bg-gray-200">Hana Yume</a></li>
+                            <li><a href="chaussure2.html" class="block px-4 py-2 hover:bg-gray-200">Bakemono Hana</a>
+                            </li>
+                            <li><a href="chaussure3.html" class="block px-4 py-2 hover:bg-gray-200">Kaikai Bloom</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button onclick="toggleCart()" class="relative text-black font-bold">
+                            🛒 <span id="cart-count"
+                                class="absolute -top-2 -right-3 bg-pink-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+                        </button>
+                    </li>
+                </ul>
+                <button id="mobile-menu-button" class="md:hidden text-black">
+                    ☰
+                </button>
+            </div>
         </div>
-        <ul class="hidden md:flex space-x-6">
-          <li><a href="index.html" class="hover:text-pink-400 transition text-black">Accueil</a></li>
-          <li class="relative group">
-            <a href="#" class="hover:text-pink-400 transition text-black">Produits</a>
-            <ul class="absolute left-0 hidden mt-2 bg-white text-gray-900 shadow-lg group-hover:block">
-              <li><a href="chaussure1.html" class="block px-4 py-2 hover:bg-gray-200">Hana Yume</a></li>
-              <li><a href="chaussure2.html" class="block px-4 py-2 hover:bg-gray-200">Bakemono Hana</a>
-              </li>
-              <li><a href="chaussure3.html" class="block px-4 py-2 hover:bg-gray-200">Kaikai Bloom</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <button onclick="toggleCart()" class="relative text-black font-bold">
-              🛒 <span id="cart-count"
-                class="absolute -top-2 -right-3 bg-pink-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
-            </button>
-          </li>
+        <ul id="mobile-menu" class="hidden md:hidden bg-white text-gray-900 shadow-lg">
+            <li><a href="index.html" class="block px-4 py-2 hover:bg-gray-200">Accueil</a></li>
+            <li class="relative group">
+                <a href="#" class="block px-4 py-2 hover:bg-gray-200">Produits</a>
+                <ul class="hidden group-hover:block">
+                    <li><a href="chaussure1.html" class="block px-4 py-2 hover:bg-gray-200">Hana Yume</a></li>
+                    <li><a href="chaussure2.html" class="block px-4 py-2 hover:bg-gray-200">Bakemono Hana</a></li>
+                    <li><a href="chaussure3.html" class="block px-4 py-2 hover:bg-gray-200">Kaikai Bloom</a></li>
+                </ul>
+            </li>
+            <li>
+                <button onclick="toggleCart()" class="block px-4 py-2 hover:bg-gray-200">
+                    🛒 <span id="cart-count-mobile"
+                        class="bg-pink-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+                </button>
+            </li>
         </ul>
-      </div>
-    </div>
-  </nav>
+    </nav>
 
   <div id="cart" class="hidden fixed top-20 right-4 bg-white shadow-lg rounded-lg p-4 w-80 z-50 ">
     <h2 class="text-lg font-bold mb-2">Votre panier</h2>
