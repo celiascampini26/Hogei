@@ -49,15 +49,17 @@
         </div>
     </nav>
 
-    <div id="cart" class="hidden fixed top-20 right-4 bg-white shadow-lg rounded-lg p-4 w-80 z-50">
+    <div id="cart" class="hidden fixed top-20 right-4 bg-white shadow-lg rounded-lg p-4 w-80 z-50 ">
         <h2 class="text-lg font-bold mb-2">Votre panier</h2>
         <ul id="cart-items" class="space-y-2"></ul>
         <p class="mt-4 font-semibold">Total : <span id="cart-total">0€</span></p>
     </div>
 
     <div id="container">
-        <div class="">
-
+        <div class="" style='width: 100%; height: 100%; position: relative;'>
+            <h3 style="color: #D8A2A9; font-size: 1.5em; font-family: 'ellograph-cf', monospace;" class="titre_haut">
+                Personnalise-la en cliquant dessus!
+              </h3>
             <?xml version="1.0" encoding="UTF-8"?>
             <svg id="product-svg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
                 <defs>
@@ -76,6 +78,7 @@
 
             <img id="background-image" src="chaussure2.png">
 
+
             <div class="flex justify-center mt-6">
                 <lottie-player id="animation2" src="animation2.json" background="transparent" speed="1"
                     style="width: 300px; height: 300px; display: none;" loop autoplay></lottie-player>
@@ -91,7 +94,9 @@
             </div>
 
             <br>
-            <p>210€ → Personnalise-la</p>
+            <p>210€ → Personnalise-la</p> <br><button
+                class="bg-green-200 text-pink-500 px-3 py-1 rounded-full hover:bg-green-500 transition text-sm">Etidion
+                limité</button>
 
 
             <div class="container mx-auto p-2">
@@ -139,31 +144,30 @@
                 </div>
             </div>
 
+
             <br>
 
 
+
             <p
-            style="font-weight: bold; font-family: 'ellograph-cf', monospace; text-align: justify; font-size: 0.9em;">
-            - La Signature
-        </p>
-        <p style="text-align: justify; font-size: 0.9em;">
-            Fruit d'une collaboration exclusive avec Takashi Murakami, cette sneaker transforme chacun de tes pas en œuvre d’art.<br>
+                style="font-weight: bold; font-family: 'ellograph-cf', monospace; text-align: justify; font-size: 0.9em;">
+                - La Signature
+            </p>
+            <p style="text-align: justify; font-size: 0.9em;">
+                Fruit d'une collaboration exclusive avec Takashi Murakami, cette sneaker transforme chacun de tes pas en
+                œuvre d’art.<br>
+                Plus qu'une simple chaussure, c’est une expérience. Les zones colorés sont cliquables : personnalise-la,
+                joue avec les couleurs et crée une paire à ton image.<br>
+                Son tissu imprimé vient délicatement se rabattre sur la sneaker, comme un voile bohème, fusionnant
+                l’élégance d’un style bohème-chic avec l’univers pop et coloré de Murakami.<br>
+                Avec Hogei, tu ne portes pas qu’une chaussure, tu racontes ton histoire et tu marques les esprits.<br>
+            </p>
+            <br>
+            <p style="font-weight: bold; text-align: center; font-family: 'ellograph-cf', monospace;">Empreintes aussi
+                ces
+                modèles!</p>
 
-            Plus qu'une simple chaussure, c’est une expérience. <strong>Les zones colorés sont cliquables : personnalise-la</strong>, joue avec les couleurs et crée une paire à ton image.<br>
-            
-            Son tissu imprimé vient délicatement se rabattre sur la sneaker, comme un voile bohème, fusionnant l’élégance d’un style bohème-chic avec l’univers pop et coloré de Murakami.<br>
-            
-            Avec Hogei, tu ne portes pas qu’une chaussure, tu racontes ton histoire et tu marques les esprits.<br>
-                        
-        </p>
-        <br>
-        <p style="font-weight: bold; text-align: center; font-family: 'ellograph-cf', monospace;">Empreintes aussi
-            ces
-            modèles!</p>
 
-
-            
-            
             <!-- <p style="font-weight: bold; text-align: center;">div class="col-xs-12 col-sm-4 col-md-4"</p> -->
 
             <div class="flex justify-center space-x-8 mt-8">
@@ -205,7 +209,7 @@
 
     <div class="flex justify-center mt-6">
         <input
-            class="jscolor {onFineChange:'changeColor(this)'} border-2 border-gray-300 rounded-lg p-2 shadow-md focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300"
+            class="jscolor {onFineChange:'changeColor(this)'} border-2 border-gray-300 rounded-lg p-2 shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-300"
             value="D8A2A9">
     </div>
 
@@ -245,8 +249,8 @@
         // Change la couleur et affiche l'animation à l'endroit du changement
         function changeColor(picker) {
             if (selectedShape) {
-                
-                selectedShape.style.fill =  picker.toHEXString(); // Change la couleur de la forme sélectionnée
+
+                selectedShape.style.fill = picker.toHEXString(); // Change la couleur de la forme sélectionnée
                 selectedShape.style.opacity = "1"; // Remet l'opacité normale
                 // Obtenir les coordonnées du path sélectionné
                 let bbox = selectedShape.getBoundingClientRect();
@@ -289,7 +293,7 @@
         function addToCart() {
             const item = {
                 name: "Bakemono Hana",
-                price: 240
+                price: 210
             };
             cart.push(item);
             updateCart();
@@ -345,7 +349,7 @@
 
             const item = {
                 name: "Bakemono Hana",
-                price: 240,
+                price: 210,
                 size: selectedSize,
                 quantity: 1
             };
@@ -383,7 +387,6 @@
         //     cartEl.classList.toggle("hidden");
         // }
     </script>
-
 </body>
 
-</html>s
+</html>

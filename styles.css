@@ -3,7 +3,7 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    color:black;
+    color: black;
     font-family: "Berlin Sans FB Demi", sans-serif;
 }
 
@@ -13,14 +13,13 @@ html {
     box-sizing: border-box;
 }
 
-
 #container {
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
 .p {
-    padding:2rem;
+    padding: 2rem;
 }
 
 #product-svg {
@@ -43,7 +42,7 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 100%;
     height: auto;
 }
 
@@ -76,7 +75,21 @@ html {
     border-radius: 5px;
     cursor: pointer;
 }
-
 .color-changing-svg path {
     transition: fill 1s ease;
+}
+
+.titre_haut {
+    position: absolute;
+    z-index: 1;
+    top: 15%;
+    text-align: center;
+    width: 100%;
+    font-weight: 700;
+    font-size: 2em;
+}
+@media all and (max-width: 1000px) {
+    #container {
+        grid-template-columns: 100%;
+    }
 }
